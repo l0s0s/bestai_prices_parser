@@ -1,0 +1,32 @@
+{
+  "openai/gpt-4o": {
+    "input_usd_per_1m": 2.50,
+    "output_usd_per_1m": 10.00,
+    "source_url": "https://openai.com/api/pricing/",
+    "updated_at": "2026-08-01T00:00:00Z"
+  },
+  "openai/gpt-4o-mini": {
+    "input_usd_per_1m": 0.15,
+    "output_usd_per_1m": 0.60,
+    "source_url": "https://openai.com/api/pricing/",
+    "updated_at": "2026-08-01T00:00:00Z"
+  },
+  "anthropic/claude-3-5-sonnet": {
+    "input_usd_per_1m": 3.00,
+    "output_usd_per_1m": 15.00,
+    "source_url": "https://www.anthropic.com/pricing",
+    "updated_at": "2026-08-01T00:00:00Z"
+  },
+  "google/gemini-2-5-flash": {
+    "input_usd_per_1m": 0.075,
+    "output_usd_per_1m": 0.30,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-01T00:00:00Z"
+  },
+  "deepseek/deepseek-v3": {
+    "input_usd_per_1m": 0.14,
+    "output_usd_per_1m": 0.28,
+    "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "updated_at": "2026-08-01T00:00:00Z"
+  }
+}

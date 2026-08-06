@@ -1,0 +1,38 @@
+[
+  {
+    "id": "apirank",
+    "name": "APIRank",
+    "url": "https://apirank.vip/providers/",
+    "enabled": true
+  },
+  {
+    "id": "aiapipk",
+    "name": "AIAPIPK",
+    "url": "https://www.aiapipk.com/",
+    "enabled": true
+  },
+  {
+    "id": "veridrop",
+    "name": "Veridrop Certified",
+    "url": "https://veridrop.org/relays/certified",
+    "enabled": true
+  },
+  {
+    "id": "aiapiprices",
+    "name": "AI API Prices",
+    "url": "https://aiapiprices.com/",
+    "enabled": false
+  },
+  {
+    "id": "inferras",
+    "name": "Inferras",
+    "url": "https://www.inferras.org/compare/ai-api-pricing",
+    "enabled": false
+  },
+  {
+    "id": "developersdigest",
+    "name": "Developers Digest",
+    "url": "https://www.developersdigest.tech/tools/ai-api-pricing",
+    "enabled": false
+  }
+]
