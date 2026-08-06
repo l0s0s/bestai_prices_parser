@@ -13,13 +13,13 @@ def get_system_prompt() -> str:
     if prompt_path.exists():
         return prompt_path.read_text(encoding="utf-8")
     return (
-        "Извлеки только цены AI API из переданного текста.\n"
-        "Не используй знания из памяти и не угадывай отсутствующие значения.\n"
-        "Для каждой цены сохрани точный фрагмент страницы в raw_price_text.\n"
-        "Разделяй input и output price.\n"
-        "Не пересчитывай валюту и единицы.\n"
-        "Если значение неоднозначно, установи needs_review=true.\n"
-        "Верни только JSON по переданной JSON Schema.\n"
+        "Extract only AI API pricing entries from the provided text.\n"
+        "Do not use prior memory knowledge or guess missing values.\n"
+        "For each extracted price entry, capture the exact raw snippet in raw_price_text.\n"
+        "Separate input and output token prices.\n"
+        "Do not convert currencies or token units.\n"
+        "If a price entry is ambiguous or uncertain, set needs_review=true.\n"
+        "Return strictly JSON output adhering to the provided JSON Schema.\n"
     )
 
 
@@ -88,8 +88,8 @@ def rank_pricing_links(candidates: list[dict], website_url: str) -> str:
     }
 
     system_prompt = (
-        "Выбери ТОЛЬКО ОДИН самый вероятный URL страницы цен/тарифной сетки API "
-        "из предоставленного списка кандидатов. Не придумывай новые URL."
+        "Select ONLY ONE most probable API pricing page URL "
+        "from the provided candidate list. Do not invent new URLs."
     )
 
     valid_urls = [c.get("url") for c in candidates if c.get("url")]

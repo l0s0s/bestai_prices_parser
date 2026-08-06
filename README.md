@@ -1,25 +1,25 @@
-# AI-парсер цен AI API-провайдеров для BestAIPrice
+# BestAIPrice AI Price Parser
 
-Автоматизированная система сбора, извлечения, нормализации, проверки надежности и экспорта цен AI API провайдеров в формате JSON для готовой вёрстки сайта BestAIPrice.
+An automated system for discovering, extracting, normalizing, verifying, and exporting AI API provider pricing data in JSON format for the BestAIPrice platform.
 
-## Результаты работы
-1. **Публичный JSON для фронтенда**: `public/data/providers.json` (содержит только подтвержденные цены дешевле официального базлайна производителей с уровнем доверия $\ge 0.80$).
-2. **CSV для ручной проверки**: `exports/review_prices.csv` (содержит записи, не прошедшие автофильтр с указанием причины `review_reason`).
-3. **Логи работы**: `logs/app.log` (структурированный JSON-lines лог без утечек API ключей).
-4. **Снапшоты страниц**: `snapshots/` (сохраненный очищенный текст страниц с SHA-256 хэшем).
+## Output Files
+1. **Public Frontend JSON**: `public/data/providers.json` (contains verified price entries cheaper than standard provider baselines with confidence level $\ge 0.80$).
+2. **Review CSV**: `exports/review_prices.csv` (contains entries that require manual verification along with the `review_reason`).
+3. **Structured Logs**: `logs/app.log` (JSON-lines format without sensitive API key leaks).
+4. **Page Snapshots**: `snapshots/` (cleansed Markdown/text snapshots keyed by SHA-256 content hashes).
 
 ---
 
-## Требования к окружению
+## Prerequisites & Requirements
 - Python 3.11+
 - Playwright (Chromium headless)
 - SQLite3
 
 ---
 
-## Быстрый старт
+## Quick Start
 
-### 1. Установка зависимостей
+### 1. Install Dependencies
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -27,53 +27,53 @@ pip install -r requirements.txt
 playwright install --with-deps chromium
 ```
 
-### 2. Конфигурация `.env`
-Скопируйте `.env.example` в `.env`:
+### 2. Configure Environment (`.env`)
+Copy `.env.example` to `.env`:
 ```bash
 cp .env.example .env
 ```
-Заполните ключ `AI_API_KEY` и модель `AI_MODEL` (например `claude-3-5-sonnet-20241022`).
-По умолчанию для локальной разработки `FRONTEND_JSON_PATH` установлен в `public/data/providers.json`. На продуктовом VPS установите путь к сайту:
+Set your `AI_API_KEY` and `AI_MODEL` (e.g. `claude-sonnet-5`).
+For local development, `FRONTEND_JSON_PATH` defaults to `public/data/providers.json`. On production VPS, set it to the target web root:
 ```dotenv
 FRONTEND_JSON_PATH=/var/www/bestaiprice/public/data/providers.json
 ```
 
 ---
 
-## Использование CLI
+## CLI Usage
 
- CLI основан на Typer и поддерживает 3 основные команды:
+The CLI is built with Typer and provides 3 core commands:
 
-### Инициализация базы данных
-Создаёт таблицы в SQLite (`data/bestai.db`):
+### Initialize Database
+Creates SQLite database schema (`data/bestai.db`):
 ```bash
 python -m app.cli init-db
 ```
 
-### Сбор провайдеров из каталогов
-Скачивает каталоги (APIRank, AIAPIPK, Veridrop Certified), выполняет резолвинг редиректов домена и сохраняет уникальные записи в БД:
+### Crawl Catalogs (`crawl-sources`)
+Crawls external source catalogs (APIRank, AIAPIPK, Veridrop Certified), resolves canonical domain redirect chains, and upserts unique providers to the database:
 ```bash
 python -m app.cli crawl-sources
 ```
 
-### Полный цикл обновления (`update-all`)
-Выполняет полный пайплайн: сбор источников $\rightarrow$ поиск страниц цен $\rightarrow$ загрузку и очистку HTML $\rightarrow$ AI-извлечение $\rightarrow$ нормализацию $\rightarrow$ проверку доступности и RDAP $\rightarrow$ атомарный экспорт JSON и CSV:
+### Full Execution Pipeline (`update-all`)
+Executes the end-to-end pipeline: source discovery $\rightarrow$ pricing page location $\rightarrow$ HTML fetch & clean $\rightarrow$ AI structured extraction $\rightarrow$ normalization $\rightarrow$ HTTP/RDAP trust check $\rightarrow$ atomic JSON & CSV export:
 ```bash
 python -m app.cli update-all
 ```
 
-Пример итогового вывода `update-all`:
+Example `update-all` summary:
 ```text
 =================== RUN SUMMARY ===================
 sources_processed       : 3
-providers_found         : 24
-providers_unique        : 18
-pricing_pages_found     : 18
+providers_found         : 165
+providers_unique        : 162
+pricing_pages_found     : 98
 prices_extracted        : 35
 prices_published        : 22
 records_needing_review  : 13
 errors_count            : 0
-duration_seconds        : 14.52s
+duration_seconds        : 45.12s
 ===================================================
 
 Pipeline completed successfully.
@@ -81,18 +81,18 @@ Pipeline completed successfully.
 
 ---
 
-## Запуск тестов
+## Running Tests
 
-Запуск полного пакета юнит-тестов:
+Run the full pytest suite:
 ```bash
 pytest -v
 ```
 
 ---
 
-## Настройка Cron на VPS
+## Production Cron Deployment
 
-Для ежедневного автоматического запуска в 03:15 ночи с защитой от параллельных запусков (`flock`):
+To run daily automated updates at 03:15 AM with non-blocking file locking (`flock`):
 
 ```cron
 15 3 * * * cd /opt/bestai-parser && flock -n /tmp/bestai-parser.lock .venv/bin/python -m app.cli update-all >> logs/cron.log 2>&1

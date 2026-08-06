@@ -68,7 +68,7 @@ class APIRankAdapter(SourceAdapter):
                 continue
 
             raw_name = cols[1].get_text(strip=True)
-            if not raw_name or raw_name.lower() in ["provider", "name", "провайдер"]:
+            if not raw_name or raw_name.lower() in ["provider", "name", "provider name", "title"]:
                 continue
 
             link = r.find("a", href=True)

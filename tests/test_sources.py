@@ -19,7 +19,7 @@ def test_clean_url():
 
 def test_clean_provider_name_filters_cta():
     assert clean_provider_name("访问官网", "fastapi.cn") == "Fastapi API"
-    assert clean_provider_name("перейти на сайт", "deepseek.com") == "Deepseek API"
+    assert clean_provider_name("visit site", "deepseek.com") == "Deepseek API"
     assert clean_provider_name("  OneAPI Pro  ", "oneapi.top") == "OneAPI Pro"
 
 

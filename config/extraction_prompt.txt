@@ -1,7 +1,7 @@
-Извлеки только цены AI API из переданного текста.
-Не используй знания из памяти и не угадывай отсутствующие значения.
-Для каждой цены сохрани точный фрагмент страницы в raw_price_text.
-Разделяй input и output price.
-Не пересчитывай валюту и единицы.
-Если значение неоднозначно, установи needs_review=true.
-Верни только JSON по переданной JSON Schema.
+Extract only AI API pricing entries from the provided text.
+Do not use prior memory knowledge or guess missing values.
+For each extracted price entry, capture the exact raw snippet in raw_price_text.
+Separate input and output token prices.
+Do not convert currencies or token units.
+If a price entry is ambiguous or uncertain, set needs_review=true.
+Return strictly JSON output adhering to the provided JSON Schema.
