@@ -33,6 +33,20 @@ Copy `.env.example` to `.env`:
 cp .env.example .env
 ```
 Set your `AI_API_KEY` and `AI_MODEL` (e.g. `claude-sonnet-5`).
+
+### Supported AI providers
+
+`AI_PROVIDER` selects which HTTP protocol is spoken against `AI_BASE_URL` — switching model family is a `.env` change only, no code changes required:
+
+| `AI_PROVIDER` | Example `AI_MODEL` | Protocol |
+|---|---|---|
+| `glm` | `glm-4.7` | OpenAI-compatible Chat Completions |
+| `gemini` | `gemini-2.5-flash` | OpenAI-compatible Chat Completions |
+| `codex` | `gpt-5.6-terra` | OpenAI Responses API (streaming) |
+| `claude` (default) | `claude-sonnet-5` / `claude-haiku-4-5-20251001` | Anthropic Messages API |
+
+To route all four through the Jigji multi-model gateway, set `AI_BASE_URL=https://jigji.com` and pick the matching `AI_PROVIDER`/`AI_MODEL` pair (see `.env.example` for ready-to-uncomment examples). Direct Anthropic API access (`AI_BASE_URL=https://api.anthropic.com`, `AI_PROVIDER=claude`) remains the default.
+
 For local development, `FRONTEND_JSON_PATH` defaults to `public/data/providers.json`. On production VPS, set it to the target web root:
 ```dotenv
 FRONTEND_JSON_PATH=/var/www/bestaiprice/public/data/providers.json

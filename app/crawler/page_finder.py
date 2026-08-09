@@ -77,14 +77,24 @@ def find_pricing_pages(website_url: str) -> List[str]:
         if len(verified_urls) >= 3:
             break
 
-    # If no candidate links found from home page, try candidate paths directly
-    if not verified_urls:
-        for path in CANDIDATE_PATHS:
-            target_url = clean_url(urljoin(website_url, path))
-            if verify_http_200(target_url):
-                verified_urls.append(target_url)
-            if len(verified_urls) >= 3:
-                break
+    # Always also probe the standard candidate paths, not only when the
+    # homepage yielded zero scored links. A single weak homepage match (e.g.
+    # a nav item like "API Platform" that only scores on the generic "api"
+    # keyword) used to suppress this fallback entirely — confirmed live on
+    # sunyears.com, where the homepage's one scored link was a marketing
+    # overview page with no prices at all, while the real pricing table at
+    # /models.html was never reachable in a single hop from the homepage and
+    # so never got tried. Backfilling here (skipping URLs already verified
+    # above, still capped at 3 total) means a weak or wrong homepage match no
+    # longer starves out the well-known standard paths.
+    for path in CANDIDATE_PATHS:
+        if len(verified_urls) >= 3:
+            break
+        target_url = clean_url(urljoin(website_url, path))
+        if target_url in verified_urls:
+            continue
+        if verify_http_200(target_url):
+            verified_urls.append(target_url)
 
     # AI ranking if candidates > 3 or top candidates have identical score
     if len(sorted_candidates) > 3:

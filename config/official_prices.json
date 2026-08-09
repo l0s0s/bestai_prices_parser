@@ -1,32 +1,318 @@
 {
+  "openai/gpt-3.5-turbo": {
+    "input_usd_per_1m": 0.50,
+    "output_usd_per_1m": 1.50,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-4": {
+    "input_usd_per_1m": 30.00,
+    "output_usd_per_1m": 60.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-4-turbo": {
+    "input_usd_per_1m": 10.00,
+    "output_usd_per_1m": 30.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-4.1": {
+    "input_usd_per_1m": 2.00,
+    "output_usd_per_1m": 8.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-4.1-mini": {
+    "input_usd_per_1m": 0.40,
+    "output_usd_per_1m": 1.60,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-4.1-nano": {
+    "input_usd_per_1m": 0.10,
+    "output_usd_per_1m": 0.40,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
   "openai/gpt-4o": {
     "input_usd_per_1m": 2.50,
     "output_usd_per_1m": 10.00,
-    "source_url": "https://openai.com/api/pricing/",
-    "updated_at": "2026-08-01T00:00:00Z"
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
   },
   "openai/gpt-4o-mini": {
     "input_usd_per_1m": 0.15,
     "output_usd_per_1m": 0.60,
-    "source_url": "https://openai.com/api/pricing/",
-    "updated_at": "2026-08-01T00:00:00Z"
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/o1": {
+    "input_usd_per_1m": 15.00,
+    "output_usd_per_1m": 60.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/o1-mini": {
+    "input_usd_per_1m": 1.10,
+    "output_usd_per_1m": 4.40,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/o3": {
+    "input_usd_per_1m": 2.00,
+    "output_usd_per_1m": 8.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/o3-mini": {
+    "input_usd_per_1m": 1.10,
+    "output_usd_per_1m": 4.40,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/o4-mini": {
+    "input_usd_per_1m": 1.10,
+    "output_usd_per_1m": 4.40,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5": {
+    "input_usd_per_1m": 1.25,
+    "output_usd_per_1m": 10.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5-mini": {
+    "input_usd_per_1m": 0.25,
+    "output_usd_per_1m": 2.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5-nano": {
+    "input_usd_per_1m": 0.05,
+    "output_usd_per_1m": 0.40,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.1": {
+    "input_usd_per_1m": 1.25,
+    "output_usd_per_1m": 10.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.2": {
+    "input_usd_per_1m": 1.75,
+    "output_usd_per_1m": 14.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.4": {
+    "input_usd_per_1m": 2.50,
+    "output_usd_per_1m": 15.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.4-mini": {
+    "input_usd_per_1m": 0.75,
+    "output_usd_per_1m": 4.50,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.4-nano": {
+    "input_usd_per_1m": 0.20,
+    "output_usd_per_1m": 1.25,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.5": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 30.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.6-terra": {
+    "input_usd_per_1m": 2.00,
+    "output_usd_per_1m": 12.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.6-sol": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 30.00,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "openai/gpt-5.6-luna": {
+    "input_usd_per_1m": 0.20,
+    "output_usd_per_1m": 1.20,
+    "source_url": "https://developers.openai.com/api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
   },
   "anthropic/claude-3-5-sonnet": {
     "input_usd_per_1m": 3.00,
     "output_usd_per_1m": 15.00,
-    "source_url": "https://www.anthropic.com/pricing",
-    "updated_at": "2026-08-01T00:00:00Z"
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
   },
-  "google/gemini-2-5-flash": {
+  "anthropic/claude-3-5-haiku": {
+    "input_usd_per_1m": 0.80,
+    "output_usd_per_1m": 4.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-3-opus": {
+    "input_usd_per_1m": 15.00,
+    "output_usd_per_1m": 75.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-haiku-4-5": {
+    "input_usd_per_1m": 1.00,
+    "output_usd_per_1m": 5.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-sonnet-4-5": {
+    "input_usd_per_1m": 3.00,
+    "output_usd_per_1m": 15.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-sonnet-4-6": {
+    "input_usd_per_1m": 3.00,
+    "output_usd_per_1m": 15.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-sonnet-5": {
+    "input_usd_per_1m": 2.00,
+    "output_usd_per_1m": 10.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z",
+    "note": "Introductory pricing through 2026-08-31; reverts to $3/$15 on 2026-09-01."
+  },
+  "anthropic/claude-opus-4-5": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 25.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-opus-4-6": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 25.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-opus-4-7": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 25.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-opus-4-8": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 25.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-opus-5": {
+    "input_usd_per_1m": 5.00,
+    "output_usd_per_1m": 25.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "anthropic/claude-fable-5": {
+    "input_usd_per_1m": 10.00,
+    "output_usd_per_1m": 50.00,
+    "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-1-5-pro": {
+    "input_usd_per_1m": 1.25,
+    "output_usd_per_1m": 5.00,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-1-5-flash": {
     "input_usd_per_1m": 0.075,
     "output_usd_per_1m": 0.30,
     "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
-    "updated_at": "2026-08-01T00:00:00Z"
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-2-5-pro": {
+    "input_usd_per_1m": 1.25,
+    "output_usd_per_1m": 10.00,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z",
+    "note": "<=200k context tier; >200k is $2.50 input / $15.00 output."
+  },
+  "google/gemini-2-5-flash": {
+    "input_usd_per_1m": 0.30,
+    "output_usd_per_1m": 2.50,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-2-5-flash-lite": {
+    "input_usd_per_1m": 0.10,
+    "output_usd_per_1m": 0.40,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-3-flash-preview": {
+    "input_usd_per_1m": 0.50,
+    "output_usd_per_1m": 3.00,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-3-1-flash-lite": {
+    "input_usd_per_1m": 0.25,
+    "output_usd_per_1m": 1.50,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-3-1-pro-preview": {
+    "input_usd_per_1m": 2.00,
+    "output_usd_per_1m": 12.00,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z",
+    "note": "<=200k context tier; >200k is $4.00 input / $18.00 output."
+  },
+  "google/gemini-3-5-flash-lite": {
+    "input_usd_per_1m": 0.30,
+    "output_usd_per_1m": 2.50,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-3-5-flash": {
+    "input_usd_per_1m": 1.50,
+    "output_usd_per_1m": 9.00,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "google/gemini-3-6-flash": {
+    "input_usd_per_1m": 1.50,
+    "output_usd_per_1m": 7.50,
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
   },
   "deepseek/deepseek-v3": {
     "input_usd_per_1m": 0.14,
     "output_usd_per_1m": 0.28,
     "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
-    "updated_at": "2026-08-01T00:00:00Z"
+    "updated_at": "2026-08-08T00:00:00Z",
+    "note": "Superseded by deepseek-v4-flash at the same rate; kept for legacy reseller naming."
+  },
+  "deepseek/deepseek-v4-flash": {
+    "input_usd_per_1m": 0.14,
+    "output_usd_per_1m": 0.28,
+    "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
+  },
+  "deepseek/deepseek-v4-pro": {
+    "input_usd_per_1m": 0.435,
+    "output_usd_per_1m": 0.87,
+    "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "updated_at": "2026-08-08T00:00:00Z"
   }
 }

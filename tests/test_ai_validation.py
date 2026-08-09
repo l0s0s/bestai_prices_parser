@@ -53,6 +53,19 @@ def test_login_required_detection():
     assert is_login_required("GPT-4o price $2.50 / 1M tokens") is False
 
 
+def test_login_required_not_triggered_by_suffix_style_cny_prices():
+    """Reproduces a real bug found live on Tencent Hunyuan's token-price
+    catalog: genuine digit prices in the very common Chinese "NUMBER元"
+    suffix notation (currency word AFTER the number, e.g. "1 元/百万tokens"),
+    plus an unrelated site-wide "联系客服" (contact support) link elsewhere
+    on the page that matches the login/sales-gate pattern. The old
+    prefix-only check ($123, ¥123) never recognized "1 元" as a real price,
+    so every genuinely-priced entry on that page was wrongly discarded as
+    login_required despite having nothing to do with a login wall."""
+    page_text = "Hy3\n1\n元/百万tokens\n联系客服"
+    assert is_login_required(page_text) is False
+
+
 def test_zero_price_rejection():
     snapshot = CleanedPage(
         source_url="https://example.com/pricing",
