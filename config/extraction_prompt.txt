@@ -1,7 +1,10 @@
 Extract only AI API pricing entries from the provided text.
 Do not use prior memory knowledge or guess missing values.
 For each extracted price entry, capture the exact raw snippet in raw_price_text.
-Separate input and output token prices.
+Emit exactly one entry per model: put its input price in the input_price field
+and its output price in the output_price field of that SAME entry. Never create
+two separate entries for the same model just because input and output appear on
+different lines of the page — the schema already has separate fields for each.
 Do not convert currencies or token units.
 If a price entry is ambiguous or uncertain, set needs_review=true.
 Return strictly JSON output adhering to the provided JSON Schema.

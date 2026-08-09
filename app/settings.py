@@ -12,6 +12,7 @@ class Settings(BaseSettings):
 
     ai_api_key: str = ""
     ai_base_url: str = "https://api.anthropic.com"
+    ai_provider: str = "claude"  # one of: glm | gemini | codex | claude — selects request protocol
     ai_model: str = "claude-sonnet-5"
     ai_timeout_seconds: int = 60
     ai_max_retries: int = 2

@@ -8,8 +8,8 @@ Based on `bestai_price_parser_tz.md`. This document outlines technical decisions
 
 | Dimension | Technical Decision |
 |---|---|
-| AI SDK | Official `anthropic` Python SDK. `AI_BASE_URL` and `AI_MODEL` in `.env` remain fully configurable. Anthropic Structured Output via Tool Calling Schema (`tools` and `tool_choice`). |
-| Default Model | `claude-sonnet-5` — optimal cost/performance ratio for structured extraction across ~20-160 providers/day. Configurable via `.env`. |
+| AI SDK | `app/ai/client.py` dispatches on `AI_PROVIDER` to one of three protocols: OpenAI-compatible Chat Completions (`glm`, `gemini`), OpenAI Responses API with mandatory streaming (`codex`), or the official `anthropic` SDK / Messages API (`claude`, default). `AI_BASE_URL`, `AI_PROVIDER` and `AI_MODEL` in `.env` remain fully configurable — no code change needed to switch between the four Jigji-tested model routes. All four force a single-tool call (`extract_prices`) for Structured Output. |
+| Default Model | `claude-sonnet-5` via `AI_PROVIDER=claude` — optimal cost/performance ratio for structured extraction across ~20-160 providers/day. Configurable via `.env`; see README for the GLM/Gemini/Codex/Claude routing table. |
 | Prompt Caching | `extraction_prompt.txt` + JSON Schema prefix cached using `cache_control: {"type": "ephemeral"}` for cost efficiency. |
 | ORM | SQLAlchemy 2.0 (declarative typed) with SQLite database (`data/bestai.db`). |
 | HTTP Client | `httpx.Client` with timeouts and fallback to Playwright Chromium headless for JS-rendered pages. |

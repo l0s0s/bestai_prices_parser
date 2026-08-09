@@ -34,3 +34,7 @@ exports/*.csv
 *.egg-info/
 build/
 dist/
+
+# Local debug backups and unrelated reference docs
+archive/
+Jigji_4_Model_Backend_Guide.md

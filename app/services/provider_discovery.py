@@ -27,8 +27,20 @@ def crawl_enabled_sources() -> List[DiscoveredProvider]:
     """Load config/sources.json and execute enabled adapters."""
     sources_path = Path(settings.sources_file)
     if not sources_path.exists():
+        # TZ §5.8 names "не удалось прочитать config" as one of the four
+        # conditions that must terminate the run with an error — not degrade
+        # silently. Returning [] here instead of raising used to let the
+        # whole pipeline "succeed" with 0 providers processed and 0
+        # meaningful output whenever SOURCES_FILE was missing or misconfigured
+        # (confirmed live: `crawl_enabled_sources()` against a nonexistent
+        # path just logs and returns an empty list, so `run_update_all()`
+        # would print "Pipeline completed successfully" having done nothing).
+        # This is the one call site that sits directly in `run_update_all()`'s
+        # top-level try/except (not inside the per-provider loop), so raising
+        # here correctly surfaces as `hard_failure=True` with a proper logged
+        # error, exactly matching the other three §5.8 conditions.
         logger.error(f"Sources file not found at {sources_path}", extra={"pipeline_step": "crawl_sources"})
-        return []
+        raise FileNotFoundError(f"Sources config file not found: {sources_path}")
 
     with open(sources_path, "r", encoding="utf-8") as f:
         sources_config = json.load(f)

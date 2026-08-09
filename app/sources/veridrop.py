@@ -45,7 +45,15 @@ class VeridropAdapter(SourceAdapter):
 
             target_url = clean_url(f"https://{raw_domain}")
             domain = extract_domain(target_url)
-            raw_text = el.get_text(strip=True)
+
+            # el.get_text(strip=True) on the whole relay-row card glues together
+            # unrelated text nodes with no separator — avatar initial, domain,
+            # "last checked" status line and the "前往 →" link all run together
+            # into one unreadable string. The domain itself lives in a dedicated
+            # ".relay-domain" span; prefer that and fall back to the full card
+            # text only if the page structure changes.
+            name_el = el.select_one(".relay-domain")
+            raw_text = name_el.get_text(strip=True) if name_el else el.get_text(strip=True)
             provider_name = clean_provider_name(raw_text, domain)
 
             if domain and domain not in seen_domains:

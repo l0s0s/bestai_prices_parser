@@ -24,6 +24,13 @@ class NormalizedPrice:
     review_reason: Optional[str]
 
 
+# A token made up of only digits, dots, colons and parens — never letters —
+# so it reads as a harmless date/snapshot stamp ("2024", "(2024", "06)"),
+# not a distinct named variant. See the fuzzy-match comment in
+# normalize_model_name().
+_SNAPSHOT_TOKEN_RE = re.compile(r"^[()\d.:]*$")
+
+
 def load_model_aliases() -> Dict[str, str]:
     path = Path(settings.model_aliases_file)
     if path.exists():
@@ -54,14 +61,59 @@ def normalize_model_name(source_name: str, aliases: Dict[str, str] = None) -> Op
     if aliases is None:
         aliases = load_model_aliases()
 
-    clean_name = source_name.strip().lower().replace(" ", "-")
+    # Treat whitespace, "/" and "_" as the same token separator as "-" so
+    # vendor-prefixed forms like "deepseek-ai/DeepSeek-R1" line up with the
+    # "-"-only alias keys, both for the exact lookup and the fuzzy fallback.
+    clean_name = re.sub(r"[\s/_]+", "-", source_name.strip().lower())
 
     if clean_name in aliases:
         return aliases[clean_name]
 
+    # Token-boundary-aware fuzzy fallback. A raw substring check (`k in
+    # clean_name`) lets a short alias key match inside an unrelated name that
+    # merely happens to contain the same letters — e.g. the alias "o1" (for
+    # OpenAI o1) matches inside "sao10k-l3-8b-lunaris" (a completely different,
+    # unrelated open-weight model on Novita), silently mislabeling it as
+    # OpenAI o1 pricing with needs_review left False. Splitting both sides
+    # into "-"-delimited tokens and requiring the alias key's tokens to line
+    # up as a contiguous run of whole tokens inside the name keeps the
+    # intended matches while rejecting ones that only line up mid-token.
+    #
+    # Token-boundary alignment alone is still not enough to decide whether a
+    # match is safe — it depends on which side carries the leftover tokens:
+    #
+    # - Leftover tokens BEFORE the match (e.g. "deepseek-ai" before
+    #   "deepseek-r1") are a harmless vendor/org namespace prefix, as in the
+    #   HuggingFace-style "deepseek-ai/DeepSeek-R1" naming this fallback was
+    #   built for — always safe to bridge.
+    # - Leftover tokens AFTER the match (e.g. "1106", "preview" after "gpt-4")
+    #   denote a real, differently-priced variant. Accepting these guessed a
+    #   short/generic alias key ("gpt-4") onto a longer, more specific real
+    #   SKU ("gpt-4-1106-preview", GPT-4 Turbo preview) — confirmed live on a
+    #   sunyears.com listing this audit, where it silently attached the wrong
+    #   official baseline to a real published price. Only bridge trailing
+    #   tokens that are pure digit/date/snapshot stamps (e.g. "2024", "08",
+    #   "(2024", "06)") — never a lettered qualifier.
+    # - The reverse shape — the source name is a shortened/generic form of a
+    #   MORE specific alias key (e.g. "Qwen" is a prefix of "qwen-max";
+    #   "gemini-3.1-pro" is a prefix of "gemini-3.1-pro-preview") — is never
+    #   bridged at all: accepting it means guessing which specific variant a
+    #   vaguer source name meant, which TZ explicitly forbids ("не угадывать
+    #   отсутствующие значения").
+    name_tokens = clean_name.split("-")
     for k, v in aliases.items():
-        if k in clean_name or clean_name in k:
-            return v
+        key_tokens = k.split("-")
+        if key_tokens == name_tokens:
+            continue  # already handled by the exact dict lookup above
+        n, m = len(name_tokens), len(key_tokens)
+        if m > n:
+            continue
+        for start in range(n - m + 1):
+            if name_tokens[start:start + m] != key_tokens:
+                continue
+            trailing = name_tokens[start + m:]
+            if all(_SNAPSHOT_TOKEN_RE.match(t) for t in trailing):
+                return v
 
     return None
 
@@ -104,25 +156,38 @@ def normalize_price_entry(
     needs_review = entry.needs_review
     review_reason = entry.review_reason
 
-    if not canonical_id and not needs_review:
-        needs_review = True
+    # needs_review can already be True here with no review_reason — the AI is
+    # allowed to set needs_review=true on its own (per prompt: "if ambiguous,
+    # set needs_review=true") without explaining why. Each check below used to
+    # gate on "not needs_review" to avoid clobbering an earlier, more specific
+    # reason, but that also meant an AI-set-but-unexplained flag silently ate
+    # every later check, leaving review_reason blank in the CSV. Gate on
+    # "not review_reason" instead: still first-reason-wins, but a blank reason
+    # always gets filled in.
+    if not canonical_id and not review_reason:
         review_reason = "unknown_model"
+    needs_review = needs_review or not canonical_id
 
     # Multiplier handling
     multiplier = parse_multiplier_value(entry)
     if multiplier is not None:
         if multiplier <= 0 or multiplier > 100:
-            if not needs_review:
-                needs_review = True
+            needs_review = True
+            if not review_reason:
                 review_reason = "unclear_multiplier"
 
     # Currency conversion rate to USD
     currency = (entry.currency or "USD").upper().strip()
     rate = fx_rates.get(currency, 1.0 if currency == "USD" else None)
 
-    if rate is None and not needs_review:
+    if rate is None:
         needs_review = True
-        review_reason = "unclear_price_unit"
+        if not review_reason:
+            review_reason = "unclear_price_unit"
+        # Regardless of whether this is the first or a later-found issue, an
+        # unresolvable currency must never reach the multiplication below as
+        # None — that crashes the whole provider (float * NoneType) instead of
+        # just flagging the one price for review.
         rate = 1.0
 
     # Token unit conversion (1K -> 1M)
@@ -135,8 +200,23 @@ def normalize_price_entry(
     elif "request" in unit_clean or "call" in unit_clean:
         unit_multiplier = 1.0
     else:
-        if not needs_review:
-            needs_review = True
+        needs_review = True
+        if not review_reason:
+            review_reason = "unclear_price_unit"
+
+    # `unit` is a single field applied to both input and output — it cannot
+    # represent a page where the two are billed on different token scales
+    # (e.g. "$3.75 / million input tokens" next to "$0.01 / thousand output
+    # tokens", seen live on Replicate). Applying one unit_multiplier to both
+    # in that case silently under- or over-scales one of the two prices by
+    # 1000x. Detect the mixed-unit signature in raw_price_text itself and
+    # force manual review rather than trust either field's placement.
+    raw_lower = (entry.raw_price_text or "").lower()
+    has_million_marker = bool(re.search(r"\bmillion\b|\b1m\b", raw_lower))
+    has_thousand_marker = bool(re.search(r"\bthousand\b|\b1k\b", raw_lower))
+    if entry.input_price is not None and entry.output_price is not None and has_million_marker and has_thousand_marker:
+        needs_review = True
+        if not review_reason:
             review_reason = "unclear_price_unit"
 
     # Baseline info
@@ -179,6 +259,14 @@ def normalize_price_entry(
         inp_ok = (input_usd_1m is None) or (off_inp and input_usd_1m < off_inp)
         out_ok = (output_usd_1m is None) or (off_out and output_usd_1m < off_out)
         is_cheaper = bool(inp_ok and out_ok and (input_usd_1m is not None or output_usd_1m is not None))
+
+    # Last-resort catch-all: the AI can flag needs_review=true for reasons none
+    # of the mechanical checks above catch (e.g. it judged the text ambiguous
+    # for a reason outside this code's checklist). Never let a flagged record
+    # reach the review CSV with a blank reason column — that leaves a human
+    # reviewer with no clue what to look at.
+    if needs_review and not review_reason:
+        review_reason = "ai_flagged_ambiguous"
 
     return NormalizedPrice(
         canonical_model_id=canonical_id,
