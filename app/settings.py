@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     database_url: str = "sqlite:///data/bestai.db"
     sources_file: str = "config/sources.json"
     model_aliases_file: str = "config/model_aliases.json"
+    payment_methods_file: str = "config/payment_methods.json"
     official_prices_file: str = "config/official_prices.json"
     extraction_prompt_file: str = "config/extraction_prompt.txt"
     fx_rates_file: str = "config/fx_rates.json"

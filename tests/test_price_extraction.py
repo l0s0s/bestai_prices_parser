@@ -1,3 +1,4 @@
+import json
 import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -5,7 +6,12 @@ from sqlalchemy.orm import sessionmaker
 from app.models import Base, Provider, ProviderPrice
 from app.ai.schemas import RawPriceEntry
 from app.services.normalization import normalize_price_entry
-from app.services.price_extraction import merge_same_model_entries, save_prices, _merge_price_pair
+from app.services.price_extraction import (
+    merge_same_model_entries,
+    save_prices,
+    _merge_price_pair,
+    select_publishable_prices,
+)
 
 
 @pytest.fixture()
@@ -148,3 +154,53 @@ def test_save_prices_second_run_merges_into_existing_row_without_wiping_fields(d
     assert len(rows) == 1
     assert rows[0].input_price_usd_per_1m == 1.0
     assert rows[0].output_price_usd_per_1m == 5.0
+
+
+def test_select_publishable_prices_reads_payment_methods_from_file(db_session, tmp_path, monkeypatch):
+    """Payment methods are no longer parsed at all — select_publishable_prices
+    must look them up from config/payment_methods.json by provider domain."""
+    pm_file = tmp_path / "payment_methods.json"
+    pm_file.write_text(json.dumps({"test.com": ["paypal", "revolut"]}), encoding="utf-8")
+    monkeypatch.setattr("app.settings.settings.payment_methods_file", str(pm_file))
+
+    provider = Provider(
+        name="Test",
+        domain="test.com",
+        website_url="https://test.com",
+        pricing_url="https://test.com/pricing",
+        site_alive=True,
+        trust_status="green",
+    )
+    db_session.add(provider)
+    db_session.commit()
+
+    full = _make_pair("GPT-4o", input_price=1.0, output_price=4.0, raw_price_text="$1 / $4 per 1M")
+    save_prices(provider, [full], "https://test.com/pricing", db=db_session)
+
+    rows = select_publishable_prices(db_session)
+    assert len(rows) == 1
+    assert rows[0]["payment_methods"] == ["paypal", "revolut"]
+
+
+def test_select_publishable_prices_defaults_to_empty_payment_methods_when_no_entry(db_session, tmp_path, monkeypatch):
+    pm_file = tmp_path / "payment_methods.json"
+    pm_file.write_text("{}", encoding="utf-8")
+    monkeypatch.setattr("app.settings.settings.payment_methods_file", str(pm_file))
+
+    provider = Provider(
+        name="Test",
+        domain="test.com",
+        website_url="https://test.com",
+        pricing_url="https://test.com/pricing",
+        site_alive=True,
+        trust_status="green",
+    )
+    db_session.add(provider)
+    db_session.commit()
+
+    full = _make_pair("GPT-4o", input_price=1.0, output_price=4.0, raw_price_text="$1 / $4 per 1M")
+    save_prices(provider, [full], "https://test.com/pricing", db=db_session)
+
+    rows = select_publishable_prices(db_session)
+    assert len(rows) == 1
+    assert rows[0]["payment_methods"] == []

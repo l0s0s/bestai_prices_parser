@@ -12,6 +12,7 @@ from app.crawler.fetcher import fetch
 from app.crawler.cleaner import clean_html, save_snapshot
 from app.ai.extractor import extract_prices_with_ai
 from app.services.price_extraction import validate_ai_result, save_prices, select_publishable_prices, expire_unconfirmed_prices
+from app.services.payment_methods import load_payment_methods_map, save_payment_methods_map, ensure_payment_methods_entry
 from app.services.trust_check import update_trust_signals
 from app.services.exporter import export_frontend_json_atomically, export_review_csv
 from app.logging_setup import logger
@@ -51,6 +52,14 @@ def run_update_all() -> RunSummary:
         providers: list[Provider] = normalize_and_deduplicate(discovered, db=db)
         summary.providers_unique = len(providers)
 
+        # Payment methods are no longer parsed from pages at all — they live
+        # only in config/payment_methods.json, keyed by provider domain, and
+        # are looked up (never mechanically extracted) at export time. All
+        # this step does is make sure every provider we attempt to price this
+        # run has an entry in that file, creating an empty one if missing so
+        # the file grows to cover the full provider set for manual curation.
+        payment_methods_map = load_payment_methods_map()
+
         # Step 3: Process each provider
         for provider in providers:
             try:
@@ -58,6 +67,8 @@ def run_update_all() -> RunSummary:
                 if pricing_urls:
                     summary.pricing_pages_found += len(pricing_urls)
                     provider.pricing_url = pricing_urls[0]
+                    if ensure_payment_methods_entry(provider.domain, payment_methods_map):
+                        save_payment_methods_map(payment_methods_map)
 
                 for url in pricing_urls:
                     fetched = fetch(url)
