@@ -7,6 +7,7 @@ from app.ai.schemas import AiExtractionResult, RawPriceEntry
 from app.crawler.cleaner import CleanedPage
 from app.models import Provider, ProviderPrice, PriceHistory
 from app.services.normalization import normalize_price_entry, NormalizedPrice
+from app.services.payment_methods import load_payment_methods_map, get_payment_methods
 from app.settings import settings
 from app.logging_setup import logger
 
@@ -336,6 +337,7 @@ def _dedupe_publishable_rows(rows: List[dict]) -> List[dict]:
 def select_publishable_prices(db: Session) -> List[dict]:
     """Select records that satisfy publishing rules in TZ §11."""
     publishable = []
+    payment_methods_map = load_payment_methods_map()
 
     providers = db.query(Provider).all()
     for provider in providers:
@@ -392,6 +394,7 @@ def select_publishable_prices(db: Session) -> List[dict]:
                 "trust_status": provider.trust_status,
                 "source_url": price.source_url,
                 "last_checked_at": price.last_checked_at.isoformat() + "Z" if price.last_checked_at else datetime.utcnow().isoformat() + "Z",
+                "payment_methods": get_payment_methods(provider.domain, payment_methods_map),
             })
 
     return _dedupe_publishable_rows(publishable)

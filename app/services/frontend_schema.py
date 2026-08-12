@@ -15,6 +15,7 @@ FRONTEND_JSON_SCHEMA = {
             "trust_status",
             "source_url",
             "last_checked_at",
+            "payment_methods",
         ],
         "properties": {
             "provider_name": {"type": "string"},
@@ -31,6 +32,7 @@ FRONTEND_JSON_SCHEMA = {
             "trust_status": {"type": "string", "enum": ["green", "yellow", "red"]},
             "source_url": {"type": "string"},
             "last_checked_at": {"type": "string"},
+            "payment_methods": {"type": "array", "items": {"type": "string"}},
         },
     },
 }

@@ -23,7 +23,8 @@ def test_export_frontend_json_atomically(tmp_path, monkeypatch):
             "output_discount_percent": 50.0,
             "trust_status": "green",
             "source_url": "https://test.com/pricing",
-            "last_checked_at": "2026-08-01T00:00:00Z"
+            "last_checked_at": "2026-08-01T00:00:00Z",
+            "payment_methods": ["paypal", "crypto"]
         }
     ]
 

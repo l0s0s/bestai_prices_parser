@@ -23,6 +23,9 @@ class Provider(Base):
     domain_age_days: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
     trust_status: Mapped[str] = mapped_column(String(16), default="yellow")  # green | yellow | red
     last_checked_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    # Payment methods are NOT stored on the provider row: they live entirely
+    # in config/payment_methods.json (see app/services/payment_methods.py),
+    # keyed by domain, and are looked up from there at export time.
 
     sources: Mapped[List["ProviderSource"]] = relationship(back_populates="provider", cascade="all, delete-orphan")
     prices: Mapped[List["ProviderPrice"]] = relationship(back_populates="provider", cascade="all, delete-orphan")
