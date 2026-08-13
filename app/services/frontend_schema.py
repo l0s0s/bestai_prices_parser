@@ -41,3 +41,28 @@ FRONTEND_JSON_SCHEMA = {
 def validate_frontend_json(data: list) -> None:
     """Validate output data list against JSON schema."""
     jsonschema.validate(instance=data, schema=FRONTEND_JSON_SCHEMA)
+
+
+MODEL_CATALOG_JSON_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "canonical_model_id",
+            "display_name",
+            "description_ru",
+            "description_en",
+        ],
+        "properties": {
+            "canonical_model_id": {"type": "string"},
+            "display_name": {"type": "string"},
+            "description_ru": {"type": "string"},
+            "description_en": {"type": "string"},
+        },
+    },
+}
+
+
+def validate_model_catalog_json(data: list) -> None:
+    """Validate the public/data/models.json output list against its schema."""
+    jsonschema.validate(instance=data, schema=MODEL_CATALOG_JSON_SCHEMA)

@@ -8,6 +8,7 @@ from app.crawler.cleaner import CleanedPage
 from app.models import Provider, ProviderPrice, PriceHistory
 from app.services.normalization import normalize_price_entry, NormalizedPrice
 from app.services.payment_methods import load_payment_methods_map, get_payment_methods
+from app.services.model_descriptions import load_model_descriptions, get_model_description
 from app.settings import settings
 from app.logging_setup import logger
 
@@ -398,6 +399,40 @@ def select_publishable_prices(db: Session) -> List[dict]:
             })
 
     return _dedupe_publishable_rows(publishable)
+
+
+def select_model_catalog(publishable_rows: List[dict]) -> List[dict]:
+    """Build the public bilingual model catalog (public/data/models.json) for
+    the canonical models actually published this run.
+
+    Restricted to canonical_model_id values present in publishable_rows AND
+    with a hand-authored entry in config/model_descriptions.json. Never
+    fabricates a description for an id that's missing one — just skips it
+    and logs a warning so the gap is visible for whoever maintains that
+    file."""
+    descriptions = load_model_descriptions()
+    canonical_ids = sorted({
+        row["canonical_model_id"] for row in publishable_rows
+        if row.get("canonical_model_id")
+    })
+
+    catalog: List[dict] = []
+    for canonical_id in canonical_ids:
+        entry = get_model_description(canonical_id, descriptions)
+        if entry is None:
+            logger.warning(
+                f"No model description entry for {canonical_id}; skipping from models.json.",
+                extra={"pipeline_step": "select_model_catalog"},
+            )
+            continue
+        catalog.append({
+            "canonical_model_id": canonical_id,
+            "display_name": entry.get("display_name", ""),
+            "description_ru": entry.get("description_ru", ""),
+            "description_en": entry.get("description_en", ""),
+        })
+
+    return catalog
 
 
 def expire_unconfirmed_prices(db: Session, run_start_time: datetime) -> int:
