@@ -1,6 +1,7 @@
 import typer
 from app.db import init_db as db_init
 from app.services.provider_discovery import crawl_enabled_sources, normalize_and_deduplicate
+from app.services.payment_methods import sync_payment_methods_into_frontend_json
 from app.orchestrator import run_update_all, RunSummary
 
 app = typer.Typer(help="CLI tool for BestAIPrice parser")
@@ -46,6 +47,14 @@ def update_all_cmd():
         raise typer.Exit(code=1)
     else:
         typer.echo("Pipeline completed successfully.")
+
+
+@app.command("sync-payment-methods")
+def sync_payment_methods_cmd():
+    """Refresh payment_methods in public/data/providers.json from
+    config/payment_methods.json without re-running the full pipeline."""
+    changed = sync_payment_methods_into_frontend_json()
+    typer.echo(f"Updated payment_methods for {changed} row(s) in public/data/providers.json.")
 
 
 if __name__ == "__main__":

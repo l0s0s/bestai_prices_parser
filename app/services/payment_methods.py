@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from typing import Dict, List
 
+from app.services.exporter import export_frontend_json_atomically
 from app.settings import settings
 from app.logging_setup import logger
 
@@ -49,3 +50,38 @@ def ensure_payment_methods_entry(provider_domain: str, data: Dict[str, List[str]
         extra={"pipeline_step": "payment_methods_lookup"},
     )
     return True
+
+
+def sync_payment_methods_into_frontend_json() -> int:
+    """Refresh payment_methods on the already-published public/data/providers.json
+    from config/payment_methods.json, without re-running the pipeline.
+
+    Reads the existing export as-is, overwrites each row's payment_methods by
+    provider_domain lookup, and writes the result back atomically (same path
+    export_frontend_json_atomically normally uses). Every other field is left
+    untouched. Returns the number of rows whose payment_methods value
+    actually changed."""
+    target_path = Path(settings.frontend_json_path)
+    if not target_path.exists():
+        raise FileNotFoundError(
+            f"{target_path} does not exist yet; run the full pipeline (update-all) at least once first."
+        )
+
+    with open(target_path, "r", encoding="utf-8") as f:
+        rows = json.load(f)
+
+    payment_map = load_payment_methods_map()
+
+    changed = 0
+    for row in rows:
+        new_methods = get_payment_methods(row.get("provider_domain", ""), payment_map)
+        if row.get("payment_methods") != new_methods:
+            changed += 1
+        row["payment_methods"] = new_methods
+
+    export_frontend_json_atomically(rows)
+    logger.info(
+        f"Synced payment_methods for {len(rows)} rows ({changed} changed) into {target_path}.",
+        extra={"pipeline_step": "sync_payment_methods"},
+    )
+    return changed
