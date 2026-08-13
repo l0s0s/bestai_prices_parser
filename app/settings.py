@@ -22,11 +22,14 @@ class Settings(BaseSettings):
     sources_file: str = "config/sources.json"
     model_aliases_file: str = "config/model_aliases.json"
     payment_methods_file: str = "config/payment_methods.json"
+    model_descriptions_file: str = "config/model_descriptions.json"
     official_prices_file: str = "config/official_prices.json"
     extraction_prompt_file: str = "config/extraction_prompt.txt"
     fx_rates_file: str = "config/fx_rates.json"
 
     frontend_json_path: str = "public/data/providers.json"
+    models_json_path: str = "public/data/models.json"
+    enable_model_catalog_export: bool = False  # temporarily off; see app/orchestrator.py
     review_csv_path: str = "exports/review_prices.csv"
     snapshots_dir: str = "snapshots"
     log_dir: str = "logs"

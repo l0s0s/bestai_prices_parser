@@ -11,6 +11,7 @@ from app.services.price_extraction import (
     save_prices,
     _merge_price_pair,
     select_publishable_prices,
+    select_model_catalog,
 )
 
 
@@ -204,3 +205,56 @@ def test_select_publishable_prices_defaults_to_empty_payment_methods_when_no_ent
     rows = select_publishable_prices(db_session)
     assert len(rows) == 1
     assert rows[0]["payment_methods"] == []
+
+
+def _md_file(tmp_path, monkeypatch, data):
+    path = tmp_path / "model_descriptions.json"
+    path.write_text(json.dumps(data), encoding="utf-8")
+    monkeypatch.setattr("app.settings.settings.model_descriptions_file", str(path))
+
+
+def test_select_model_catalog_includes_only_ids_present_in_publishable_rows(tmp_path, monkeypatch):
+    _md_file(tmp_path, monkeypatch, {
+        "openai/gpt-4o": {"display_name": "GPT-4o", "description_ru": "р", "description_en": "e"},
+        "openai/gpt-4o-mini": {"display_name": "GPT-4o Mini", "description_ru": "р2", "description_en": "e2"},
+    })
+    rows = [{"canonical_model_id": "openai/gpt-4o"}]
+
+    catalog = select_model_catalog(rows)
+
+    assert [c["canonical_model_id"] for c in catalog] == ["openai/gpt-4o"]
+    assert catalog[0]["display_name"] == "GPT-4o"
+    assert catalog[0]["description_ru"] == "р"
+    assert catalog[0]["description_en"] == "e"
+
+
+def test_select_model_catalog_skips_ids_with_no_description(tmp_path, monkeypatch):
+    _md_file(tmp_path, monkeypatch, {})
+    rows = [{"canonical_model_id": "openai/gpt-4o"}]
+
+    catalog = select_model_catalog(rows)
+
+    assert catalog == []
+
+
+def test_select_model_catalog_dedupes_repeated_canonical_ids(tmp_path, monkeypatch):
+    _md_file(tmp_path, monkeypatch, {
+        "openai/gpt-4o": {"display_name": "GPT-4o", "description_ru": "р", "description_en": "e"},
+    })
+    rows = [
+        {"canonical_model_id": "openai/gpt-4o"},
+        {"canonical_model_id": "openai/gpt-4o"},
+    ]
+
+    catalog = select_model_catalog(rows)
+
+    assert len(catalog) == 1
+
+
+def test_select_model_catalog_ignores_rows_without_canonical_id(tmp_path, monkeypatch):
+    _md_file(tmp_path, monkeypatch, {})
+    rows = [{"canonical_model_id": None}, {}]
+
+    catalog = select_model_catalog(rows)
+
+    assert catalog == []
