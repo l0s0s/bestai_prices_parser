@@ -1,212 +1,254 @@
-{
-  "anthropic/claude-3-5-haiku": {
+[
+  {
+    "canonical_model_id": "anthropic/claude-3-5-haiku",
     "display_name": "Claude 3.5 Haiku",
     "description_ru": "Claude 3.5 Haiku – компактная и быстрая модель предыдущего поколения линейки Claude, для простых задач с высокой скоростью ответа и низкой стоимостью.",
     "description_en": "Claude 3.5 Haiku is the compact, fast model from the previous Claude generation, built for simple tasks that need quick, low-cost responses."
   },
-  "anthropic/claude-fable-5": {
+  {
+    "canonical_model_id": "anthropic/claude-fable-5",
     "display_name": "Claude Fable 5",
     "description_ru": "Claude Fable 5 – специализированная модель линейки Claude пятого поколения, ориентированная на творческое письмо и генерацию историй; самая дорогая модель в линейке за счёт более развитого литературного стиля.",
     "description_en": "Claude Fable 5 is a specialized fifth-generation Claude model built for creative writing and storytelling; it's the priciest model in the lineup, reflecting its more elaborate literary style."
   },
-  "anthropic/claude-haiku-4-5": {
+  {
+    "canonical_model_id": "anthropic/claude-haiku-4-5",
     "display_name": "Claude Haiku 4.5",
     "description_ru": "Claude Haiku 4.5 – самая быстрая и доступная модель четвёртого поколения Claude, младшая по отношению к Sonnet 4.5 и моделям Opus 4.x той же линейки.",
     "description_en": "Claude Haiku 4.5 is the fastest, most affordable fourth-generation Claude model, the entry tier below Sonnet 4.5 and the Opus 4.x models in the same lineup."
   },
-  "anthropic/claude-opus-4-5": {
+  {
+    "canonical_model_id": "anthropic/claude-opus-4-5",
     "display_name": "Claude Opus 4.5",
     "description_ru": "Claude Opus 4.5 – флагманская модель поколения Claude 4, для максимально качественных и сложных рассуждений; дороже и мощнее Sonnet 4.5 и Haiku 4.5.",
     "description_en": "Claude Opus 4.5 is the flagship model of the Claude 4 generation, built for maximum-quality complex reasoning – pricier and more capable than Sonnet 4.5 and Haiku 4.5."
   },
-  "anthropic/claude-opus-4-6": {
+  {
+    "canonical_model_id": "anthropic/claude-opus-4-6",
     "display_name": "Claude Opus 4.6",
     "description_ru": "Claude Opus 4.6 – точечное обновление флагманской модели Claude Opus 4.5 с сохранением той же цены и позиционирования в линейке.",
     "description_en": "Claude Opus 4.6 is an incremental update to the flagship Claude Opus 4.5, keeping the same price and position in the lineup."
   },
-  "anthropic/claude-opus-4-7": {
+  {
+    "canonical_model_id": "anthropic/claude-opus-4-7",
     "display_name": "Claude Opus 4.7",
     "description_ru": "Claude Opus 4.7 – очередное точечное обновление флагманской линейки Opus 4.x, идущее следом за Opus 4.6.",
     "description_en": "Claude Opus 4.7 is another incremental update in the Opus 4.x flagship line, following on from Opus 4.6."
   },
-  "anthropic/claude-opus-4-8": {
+  {
+    "canonical_model_id": "anthropic/claude-opus-4-8",
     "display_name": "Claude Opus 4.8",
     "description_ru": "Claude Opus 4.8 – последняя точечная версия линейки Opus 4.x перед переходом на следующее поколение Claude Opus 5.",
     "description_en": "Claude Opus 4.8 is the last point release in the Opus 4.x line before the jump to the next-generation Claude Opus 5."
   },
-  "anthropic/claude-opus-5": {
+  {
+    "canonical_model_id": "anthropic/claude-opus-5",
     "display_name": "Claude Opus 5",
     "description_ru": "Claude Opus 5 – топовая модель линейки Claude, для максимального качества рассуждений на сложных многошаговых задачах; дороже и мощнее Sonnet и Haiku той же линейки.",
     "description_en": "Claude Opus 5 is Anthropic's top-tier Claude model, built for maximum reasoning quality on complex multi-step tasks – pricier and more capable than the Sonnet and Haiku tiers in the same lineup."
   },
-  "anthropic/claude-sonnet-4-5": {
+  {
+    "canonical_model_id": "anthropic/claude-sonnet-4-5",
     "display_name": "Claude Sonnet 4.5",
     "description_ru": "Claude Sonnet 4.5 – сбалансированная модель среднего уровня поколения Claude 4, компромисс между ценой и качеством между Haiku 4.5 и моделями Opus 4.x.",
     "description_en": "Claude Sonnet 4.5 is the balanced mid-tier model of the Claude 4 generation, a price-to-quality middle ground between Haiku 4.5 and the Opus 4.x models."
   },
-  "anthropic/claude-sonnet-4-6": {
+  {
+    "canonical_model_id": "anthropic/claude-sonnet-4-6",
     "display_name": "Claude Sonnet 4.6",
     "description_ru": "Claude Sonnet 4.6 – обновлённая версия среднего уровня Claude 4 с той же ценой и позиционированием, что и Sonnet 4.5.",
     "description_en": "Claude Sonnet 4.6 is an updated version of the Claude 4 mid tier, keeping the same price and positioning as Sonnet 4.5."
   },
-  "anthropic/claude-sonnet-5": {
+  {
+    "canonical_model_id": "anthropic/claude-sonnet-5",
     "display_name": "Claude Sonnet 5",
     "description_ru": "Claude Sonnet 5 – модель среднего уровня пятого поколения Claude, дешевле и быстрее Opus 5, но мощнее младшей Haiku; на момент запуска действует вводная цена ниже стандартной.",
     "description_en": "Claude Sonnet 5 is the mid-tier model of the fifth Claude generation – cheaper and faster than Opus 5 but more capable than the Haiku tier; it currently carries an introductory price below its standard rate."
   },
-  "deepseek/deepseek-v4-flash": {
+  {
+    "canonical_model_id": "deepseek/deepseek-v4-flash",
     "display_name": "DeepSeek V4 Flash",
     "description_ru": "DeepSeek V4 Flash – облегчённая и быстрая версия DeepSeek V4, рассчитанная на большой объём запросов при минимальной цене за токен.",
     "description_en": "DeepSeek V4 Flash is the lightweight, fast variant of DeepSeek V4, built for high request volume at the lowest per-token cost in the V4 family."
   },
-  "google/gemini-2-5-flash": {
+  {
+    "canonical_model_id": "google/gemini-2-5-flash",
     "display_name": "Gemini 2.5 Flash",
     "description_ru": "Gemini 2.5 Flash – модель среднего уровня поколения Gemini 2.5, баланс скорости и качества между экономичной Flash-Lite и топовой Pro.",
     "description_en": "Gemini 2.5 Flash is the mid-tier model in the Gemini 2.5 generation, balancing speed and quality between the economy Flash-Lite and the top-tier Pro."
   },
-  "google/gemini-2-5-flash-lite": {
+  {
+    "canonical_model_id": "google/gemini-2-5-flash-lite",
     "display_name": "Gemini 2.5 Flash-Lite",
     "description_ru": "Gemini 2.5 Flash-Lite – самая экономичная и быстрая модель линейки Gemini 2.5, для задач с высокой нагрузкой при минимальной цене за токен.",
     "description_en": "Gemini 2.5 Flash-Lite is the most cost-efficient, fastest model in the Gemini 2.5 line, built for high-volume workloads at the lowest per-token price."
   },
-  "google/gemini-2-5-pro": {
+  {
+    "canonical_model_id": "google/gemini-2-5-pro",
     "display_name": "Gemini 2.5 Pro",
     "description_ru": "Gemini 2.5 Pro – флагманская модель поколения Gemini 2.5, для наиболее сложных задач; дороже Flash и Flash-Lite той же линейки.",
     "description_en": "Gemini 2.5 Pro is the flagship model of the Gemini 2.5 generation for the most demanding tasks – pricier than Flash and Flash-Lite in the same line."
   },
-  "google/gemini-3-1-flash-lite": {
+  {
+    "canonical_model_id": "google/gemini-3-1-flash-lite",
     "display_name": "Gemini 3.1 Flash Lite",
     "description_ru": "Gemini 3.1 Flash Lite – экономичная модель поколения Gemini 3.1, младшая по отношению к Gemini 3.1 Pro Preview.",
     "description_en": "Gemini 3.1 Flash Lite is the economy model of the Gemini 3.1 generation, the entry tier below Gemini 3.1 Pro Preview."
   },
-  "google/gemini-3-1-pro-preview": {
+  {
+    "canonical_model_id": "google/gemini-3-1-pro-preview",
     "display_name": "Gemini 3.1 Pro Preview",
     "description_ru": "Gemini 3.1 Pro Preview – предварительная флагманская модель поколения Gemini 3.1, мощнее и дороже Gemini 3.1 Flash Lite.",
     "description_en": "Gemini 3.1 Pro Preview is the early-access flagship model of the Gemini 3.1 generation, more capable and pricier than Gemini 3.1 Flash Lite."
   },
-  "google/gemini-3-5-flash": {
+  {
+    "canonical_model_id": "google/gemini-3-5-flash",
     "display_name": "Gemini 3.5 Flash",
     "description_ru": "Gemini 3.5 Flash – модель среднего уровня поколения Gemini 3.5, преемница Gemini 3 Flash Preview и линейки Gemini 3.1 Flash.",
     "description_en": "Gemini 3.5 Flash is the mid-tier model of the Gemini 3.5 generation, the successor to Gemini 3 Flash Preview and the Gemini 3.1 Flash line."
   },
-  "google/gemini-3-6-flash": {
+  {
+    "canonical_model_id": "google/gemini-3-6-flash",
     "display_name": "Gemini 3.6 Flash",
     "description_ru": "Gemini 3.6 Flash – последняя на сегодня версия линейки Flash поколения Gemini 3.x, идущая следом за Gemini 3.5 Flash с более выгодной ценой на генерацию ответа.",
     "description_en": "Gemini 3.6 Flash is the latest Flash-tier release in the Gemini 3.x generation, following Gemini 3.5 Flash with a cheaper output price."
   },
-  "google/gemini-3-flash-preview": {
+  {
+    "canonical_model_id": "google/gemini-3-flash-preview",
     "display_name": "Gemini 3 Flash Preview",
     "description_ru": "Gemini 3 Flash Preview – предварительная версия модели среднего уровня нового поколения Gemini 3, предшествующая релизам Gemini 3.1 и последующим.",
     "description_en": "Gemini 3 Flash Preview is an early-access mid-tier model of the new Gemini 3 generation, ahead of the later Gemini 3.1 and beyond releases."
   },
-  "openai/gpt-4-turbo": {
+  {
+    "canonical_model_id": "openai/gpt-4-turbo",
     "display_name": "GPT-4 Turbo",
     "description_ru": "GPT-4 Turbo – флагманская модель предыдущего поколения GPT-4, более дорогая и постепенно вытесняемая линейками GPT-4.1 и GPT-5.",
     "description_en": "GPT-4 Turbo is the flagship model of the previous GPT-4 generation, pricier and gradually being superseded by the GPT-4.1 and GPT-5 lines."
   },
-  "openai/gpt-4.1": {
+  {
+    "canonical_model_id": "openai/gpt-4.1",
     "display_name": "GPT-4.1",
     "description_ru": "GPT-4.1 – базовая модель линейки GPT-4.1, преемница GPT-4 Turbo с более сбалансированной ценой; старшая по отношению к GPT-4.1 Mini и GPT-4.1 Nano.",
     "description_en": "GPT-4.1 is the base model of the GPT-4.1 line, a more cost-balanced successor to GPT-4 Turbo, and the senior tier above GPT-4.1 Mini and GPT-4.1 Nano."
   },
-  "openai/gpt-4.1-mini": {
+  {
+    "canonical_model_id": "openai/gpt-4.1-mini",
     "display_name": "GPT-4.1 Mini",
     "description_ru": "GPT-4.1 Mini – уменьшенная и более дешёвая версия GPT-4.1, компромисс между ценой и качеством внутри линейки 4.1.",
     "description_en": "GPT-4.1 Mini is a smaller, cheaper version of GPT-4.1, a price-to-quality middle ground within the 4.1 line."
   },
-  "openai/gpt-4.1-nano": {
+  {
+    "canonical_model_id": "openai/gpt-4.1-nano",
     "display_name": "GPT-4.1 Nano",
     "description_ru": "GPT-4.1 Nano – самая маленькая и дешёвая модель линейки GPT-4.1, для простых массовых задач.",
     "description_en": "GPT-4.1 Nano is the smallest, cheapest model in the GPT-4.1 line, meant for simple, high-volume tasks."
   },
-  "openai/gpt-4o-mini": {
+  {
+    "canonical_model_id": "openai/gpt-4o-mini",
     "display_name": "GPT-4o Mini",
     "description_ru": "GPT-4o Mini – компактная и недорогая мультимодальная модель семейства GPT-4o, для задач, где не требуется мощность полноразмерной модели.",
     "description_en": "GPT-4o Mini is the compact, low-cost multimodal model in the GPT-4o family, for tasks that don't need the full-size model's power."
   },
-  "openai/gpt-5": {
+  {
+    "canonical_model_id": "openai/gpt-5",
     "display_name": "GPT-5",
     "description_ru": "GPT-5 – базовая флагманская модель линейки GPT-5, отправная точка для последующих версий GPT-5.1–GPT-5.6 и их mini/nano-вариантов.",
     "description_en": "GPT-5 is the base flagship model of the GPT-5 line, the starting point for the later GPT-5.1–GPT-5.6 versions and their mini/nano variants."
   },
-  "openai/gpt-5-mini": {
+  {
+    "canonical_model_id": "openai/gpt-5-mini",
     "display_name": "GPT-5 Mini",
     "description_ru": "GPT-5 Mini – уменьшенная и более дешёвая версия GPT-5, для задач, где не нужна полная мощность флагмана.",
     "description_en": "GPT-5 Mini is a smaller, cheaper version of GPT-5, for tasks that don't need the flagship's full power."
   },
-  "openai/gpt-5-nano": {
+  {
+    "canonical_model_id": "openai/gpt-5-nano",
     "display_name": "GPT-5 Nano",
     "description_ru": "GPT-5 Nano – самая компактная и дешёвая модель линейки GPT-5, для простых задач с большим объёмом запросов.",
     "description_en": "GPT-5 Nano is the smallest, cheapest model in the GPT-5 line, built for simple, high-volume requests."
   },
-  "openai/gpt-5.1": {
+  {
+    "canonical_model_id": "openai/gpt-5.1",
     "display_name": "GPT-5.1",
     "description_ru": "GPT-5.1 – точечное обновление GPT-5 с тем же уровнем цены, следующий шаг перед GPT-5.2.",
     "description_en": "GPT-5.1 is a point update to GPT-5 at the same price level, the next step before GPT-5.2."
   },
-  "openai/gpt-5.2": {
+  {
+    "canonical_model_id": "openai/gpt-5.2",
     "display_name": "GPT-5.2",
     "description_ru": "GPT-5.2 – дальнейшее развитие линейки GPT-5 с чуть более высокой ценой за счёт возросшего качества по сравнению с GPT-5.1.",
     "description_en": "GPT-5.2 is a further step in the GPT-5 line, priced slightly higher than GPT-5.1 in exchange for improved quality."
   },
-  "openai/gpt-5.4": {
+  {
+    "canonical_model_id": "openai/gpt-5.4",
     "display_name": "GPT-5.4",
     "description_ru": "GPT-5.4 – базовая модель следующего этапа линейки GPT-5, старшая по отношению к GPT-5.4 Mini и GPT-5.4 Nano.",
     "description_en": "GPT-5.4 is the base model of the next stage in the GPT-5 line, the senior tier above GPT-5.4 Mini and GPT-5.4 Nano."
   },
-  "openai/gpt-5.4-mini": {
+  {
+    "canonical_model_id": "openai/gpt-5.4-mini",
     "display_name": "GPT-5.4 Mini",
     "description_ru": "GPT-5.4 Mini – уменьшенная и более дешёвая версия GPT-5.4 для менее требовательных задач.",
     "description_en": "GPT-5.4 Mini is a smaller, cheaper version of GPT-5.4 for less demanding tasks."
   },
-  "openai/gpt-5.4-nano": {
+  {
+    "canonical_model_id": "openai/gpt-5.4-nano",
     "display_name": "GPT-5.4 Nano",
     "description_ru": "GPT-5.4 Nano – самая компактная модель линейки GPT-5.4, для простых задач с минимальной ценой за токен.",
     "description_en": "GPT-5.4 Nano is the smallest model in the GPT-5.4 line, for simple tasks at the lowest per-token price."
   },
-  "openai/gpt-5.5": {
+  {
+    "canonical_model_id": "openai/gpt-5.5",
     "display_name": "GPT-5.5",
     "description_ru": "GPT-5.5 – модель повышенного уровня линейки GPT-5, дороже базовых версий 5.1–5.4 и служит переходом к семейству GPT-5.6.",
     "description_en": "GPT-5.5 is a higher tier in the GPT-5 line, pricier than the base 5.1–5.4 versions and serving as a bridge to the GPT-5.6 family."
   },
-  "openai/gpt-5.6-luna": {
+  {
+    "canonical_model_id": "openai/gpt-5.6-luna",
     "display_name": "GPT-5.6 Luna",
     "description_ru": "GPT-5.6 Luna – самая экономичная модель семейства GPT-5.6, младшая по отношению к Terra и флагманской Sol.",
     "description_en": "GPT-5.6 Luna is the most economical model in the GPT-5.6 family, the entry tier below Terra and the flagship Sol."
   },
-  "openai/gpt-5.6-sol": {
+  {
+    "canonical_model_id": "openai/gpt-5.6-sol",
     "display_name": "GPT-5.6 Sol",
     "description_ru": "GPT-5.6 Sol – флагманская базовая модель серии GPT-5.6, соответствующая оригинальной базовой версии GPT-5 без суффикса.",
     "description_en": "GPT-5.6 Sol is the flagship base model of the GPT-5.6 line, the direct successor to the unsuffixed GPT-5 base tier."
   },
-  "openai/gpt-5.6-terra": {
+  {
+    "canonical_model_id": "openai/gpt-5.6-terra",
     "display_name": "GPT-5.6 Terra",
     "description_ru": "GPT-5.6 Terra – модель среднего уровня семейства GPT-5.6, между экономичной Luna и флагманской Sol.",
     "description_en": "GPT-5.6 Terra is the mid-tier model in the GPT-5.6 family, between the economy Luna and the flagship Sol."
   },
-  "openai/o1": {
+  {
+    "canonical_model_id": "openai/o1",
     "display_name": "OpenAI o1",
     "description_ru": "OpenAI o1 – флагманская модель линейки рассуждающих моделей (reasoning), для самых сложных многошаговых задач; самая дорогая модель во всём каталоге.",
     "description_en": "OpenAI o1 is the flagship model in the reasoning-focused o-series, built for the most complex multi-step problems – the priciest model in the entire catalog."
   },
-  "openai/o1-mini": {
+  {
+    "canonical_model_id": "openai/o1-mini",
     "display_name": "OpenAI o1-mini",
     "description_ru": "OpenAI o1-mini – компактная и заметно более дешёвая версия o1 для менее требовательных задач с рассуждением.",
     "description_en": "OpenAI o1-mini is a compact, markedly cheaper version of o1 for lighter reasoning tasks."
   },
-  "openai/o3": {
+  {
+    "canonical_model_id": "openai/o3",
     "display_name": "OpenAI o3",
     "description_ru": "OpenAI o3 – более новое поколение линейки рассуждающих моделей после o1, дешевле флагманского o1, но мощнее компактных mini-версий.",
     "description_en": "OpenAI o3 is a newer generation in the reasoning line after o1 – cheaper than the flagship o1 but more capable than the compact mini versions."
   },
-  "openai/o3-mini": {
+  {
+    "canonical_model_id": "openai/o3-mini",
     "display_name": "OpenAI o3-mini",
     "description_ru": "OpenAI o3-mini – более доступная версия o3, для задач с рассуждением, где не требуется полная мощность модели o3.",
     "description_en": "OpenAI o3-mini is a more affordable version of o3, for reasoning tasks that don't need the full o3 model."
   },
-  "openai/o4-mini": {
+  {
+    "canonical_model_id": "openai/o4-mini",
     "display_name": "OpenAI o4-mini",
     "description_ru": "OpenAI o4-mini – следующее поколение компактных рассуждающих моделей после o3-mini, с той же ценой, но более новой архитектурой.",
     "description_en": "OpenAI o4-mini is the next generation of compact reasoning models after o3-mini, priced the same but built on newer architecture."
   }
-}
+]

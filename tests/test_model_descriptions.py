@@ -34,3 +34,18 @@ def test_get_model_description_reads_from_file_when_no_data_passed(md_file):
     data = {"openai/gpt-4o": {"display_name": "GPT-4o", "description_ru": "р", "description_en": "e"}}
     md_file.write_text(json.dumps(data), encoding="utf-8")
     assert get_model_description("openai/gpt-4o") == data["openai/gpt-4o"]
+
+
+def test_load_model_descriptions_normalizes_em_dash_to_en_dash(md_file):
+    data = {
+        "openai/gpt-4o": {
+            "display_name": "GPT-4o",
+            "description_ru": "GPT-4o — флагманская модель",
+            "description_en": "GPT-4o — the flagship model",
+        }
+    }
+    md_file.write_text(json.dumps(data), encoding="utf-8")
+    loaded = load_model_descriptions()
+    assert loaded["openai/gpt-4o"]["description_ru"] == "GPT-4o – флагманская модель"
+    assert loaded["openai/gpt-4o"]["description_en"] == "GPT-4o – the flagship model"
+    assert "—" not in json.dumps(loaded)
