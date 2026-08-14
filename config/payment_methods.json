@@ -1,14 +1,160 @@
 {
-  "aliyun.com": [],
-  "anthropic.com": [],
+  "91token.com": [
+    "CNY"
+  ],
+  "996444.cn": [
+    "CNY"
+  ],
+  "aliyun.com": [
+    "Alipay",
+    "WeChat Pay",
+    "UnionPay",
+    "Credit cards",
+    "Debit cards",
+    "Huabei",
+    "MYbank",
+    "CNY"
+  ],
+  "anthropic.com": [
+    "Credit cards",
+    "Debit cards",
+    "USD"
+  ],
+  "api-top.com": [
+    "CNY"
+  ],
+  "apikey.fun": [
+    "Alipay",
+    "WeChat Pay",
+    "CNY"
+  ],
   "apirank.vip": [],
-  "deepseek.com": [],
-  "google.dev": [],
-  "meta.com": [],
-  "microsoft.com": [],
-  "openai.com": [],
-  "openrouter.ai": [],
-  "perplexity.ai": [],
-  "qwen.ai": [],
-  "stepfun.com": []
+  "aruhub.com": [
+    "CNY"
+  ],
+  "ccwu.cc": [],
+  "codepup.cn": [
+    "CNY"
+  ],
+  "deepinfra.com": [
+    "Credit cards",
+    "Debit cards",
+    "Stripe",
+    "USD"
+  ],
+  "deepseek.com": [
+    "Alipay",
+    "WeChat Pay",
+    "CNY"
+  ],
+  "dragon3api.com": [
+    "CNY"
+  ],
+  "google.dev": [
+    "Credit cards",
+    "Debit cards",
+    "USD"
+  ],
+  "gwlink.cc": [
+    "CNY"
+  ],
+  "hapiopen.cc": [
+    "CNY"
+  ],
+  "meta.com": [
+    "Credit cards",
+    "Debit cards",
+    "PayPal",
+    "Meta Pay"
+  ],
+  "microsoft.com": [
+    "Credit cards",
+    "Debit cards",
+    "PayPal"
+  ],
+  "onehop.ai": [
+    "Credit cards",
+    "Debit cards",
+    "Stripe",
+    "USD"
+  ],
+  "openai.com": [
+    "Credit cards",
+    "Debit cards",
+    "UPI",
+    "GoPay",
+    "Pix",
+    "Kakao Pay",
+    "Naver Pay",
+    "Google Play",
+    "USD"
+  ],
+  "openrouter.ai": [
+    "Credit cards",
+    "Debit cards",
+    "Alipay",
+    "USDC",
+    "Coinbase",
+    "USD"
+  ],
+  "perplexity.ai": [
+    "Credit cards",
+    "Debit cards",
+    "Cash App",
+    "Apple Pay",
+    "Google Pay",
+    "Google Play",
+    "Samsung Galaxy Store",
+    "USD"
+  ],
+  "quotarouter.ai": [
+    "CNY",
+    "USD"
+  ],
+  "qwen.ai": [
+    "Credit cards",
+    "Debit cards",
+    "Alipay",
+    "UnionPay",
+    "CNY"
+  ],
+  "relaybases.com": [
+    "WeChat Pay",
+    "Alipay",
+    "CNY"
+  ],
+  "ssnaiyun.com": [
+    "CNY"
+  ],
+  "stepfun.com": [
+    "Alipay",
+    "WeChat Pay",
+    "CNY"
+  ],
+  "weekly-day.top": [
+    "CNY"
+  ],
+  "x-llm.net": [
+    "Alipay",
+    "CNY"
+  ],
+  "xeduapi.com": [
+    "CNY"
+  ],
+  "xiaojingai.com": [
+    "WeChat Pay",
+    "Alipay",
+    "USDT",
+    "CNY"
+  ],
+  "zivv.pro": [
+    "WeChat Pay",
+    "Alipay",
+    "USDT",
+    "Visa",
+    "Credit cards",
+    "Debit cards",
+    "CNY",
+    "USD"
+  ]
 }
