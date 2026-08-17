@@ -53,6 +53,27 @@ def lookup_domain_age(domain: str) -> Tuple[Optional[datetime], Optional[int]]:
     return None, None
 
 
+def update_domain_age_for_all_providers(db: Session) -> int:
+    """Run only the RDAP domain-age lookup for every provider in the DB —
+    no site/HTTPS check, no crawling, no AI extraction, no trust_status
+    recompute. Lets domain_created_at/domain_age_days be (re)populated on
+    demand for the whole provider set without paying for a full update-all
+    run. Commits after each provider so a mid-run failure doesn't lose
+    already-resolved lookups. Returns the number of providers whose domain
+    age was successfully resolved this run (RDAP misses/errors leave the
+    existing stored value untouched, same as update_trust_signals)."""
+    providers = db.query(Provider).all()
+    resolved = 0
+    for provider in providers:
+        created_at, age_days = lookup_domain_age(provider.domain)
+        if created_at:
+            provider.domain_created_at = created_at
+            provider.domain_age_days = age_days
+            resolved += 1
+            db.commit()
+    return resolved
+
+
 def update_trust_signals(provider: Provider, db: Session) -> None:
     """Update trust signals and status for a provider."""
     site_alive, https_ok = check_site(provider.website_url)

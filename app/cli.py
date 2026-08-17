@@ -1,8 +1,8 @@
 import typer
-from app.db import init_db as db_init
+from app.db import SessionLocal, init_db as db_init
 from app.services.provider_discovery import crawl_enabled_sources, normalize_and_deduplicate
 from app.services.payment_methods import sync_payment_methods_into_frontend_json
-from app.services.trust_check import sync_domain_age_into_frontend_json
+from app.services.trust_check import sync_domain_age_into_frontend_json, update_domain_age_for_all_providers
 from app.services.api_descriptions import build_api_descriptions
 from app.services.provider_descriptions import build_provider_descriptions
 from app.services.exporter import export_api_descriptions_json_atomically, export_provider_descriptions_json_atomically
@@ -70,11 +70,28 @@ def generate_api_descriptions_cmd():
     typer.echo(f"Wrote {len(rows)} vendor card(s) to public/data/api_descriptions.json.")
 
 
+@app.command("refresh-domain-age")
+def refresh_domain_age_cmd():
+    """Run RDAP domain-age lookups for every provider in the DB (no site/HTTPS
+    check, no crawl, no AI extraction) and publish the results into
+    public/data/providers.json. Use this to (re)populate domain_created_at/
+    domain_age_days without paying for a full update-all run."""
+    db_init()
+    db = SessionLocal()
+    try:
+        resolved = update_domain_age_for_all_providers(db=db)
+    finally:
+        db.close()
+    changed = sync_domain_age_into_frontend_json()
+    typer.echo(f"Resolved domain age via RDAP for {resolved} provider(s); updated {changed} row(s) in public/data/providers.json.")
+
+
 @app.command("sync-domain-age")
 def sync_domain_age_cmd():
     """Refresh domain_created_at/domain_age_days in public/data/providers.json
     from values already stored in the database, without re-running the full
-    pipeline (no new RDAP calls)."""
+    pipeline (no new RDAP calls). Use refresh-domain-age instead if the DB
+    itself needs new RDAP lookups."""
     changed = sync_domain_age_into_frontend_json()
     typer.echo(f"Updated domain age fields for {changed} row(s) in public/data/providers.json.")
 
