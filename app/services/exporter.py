@@ -10,6 +10,7 @@ from app.services.frontend_schema import (
     validate_frontend_json,
     validate_model_catalog_json,
     validate_api_descriptions_json,
+    validate_provider_descriptions_json,
 )
 from app.settings import settings
 from app.logging_setup import logger
@@ -71,6 +72,24 @@ def export_api_descriptions_json_atomically(rows: List[dict]) -> None:
 
     os.replace(tmp_path, target_path)
     logger.info(f"Successfully exported {len(rows)} records to {target_path}", extra={"pipeline_step": "export_api_descriptions"})
+
+
+def export_provider_descriptions_json_atomically(rows: List[dict]) -> None:
+    """Atomically write public/data/provider_descriptions.json after schema validation."""
+    target_path = Path(settings.provider_descriptions_json_path)
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+
+    tmp_path = target_path.with_suffix(".json.tmp")
+
+    validate_provider_descriptions_json(rows)
+
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(rows, f, ensure_ascii=False, indent=2)
+
+    os.chmod(tmp_path, 0o644)
+
+    os.replace(tmp_path, target_path)
+    logger.info(f"Successfully exported {len(rows)} records to {target_path}", extra={"pipeline_step": "export_provider_descriptions"})
 
 
 def export_review_csv(db: Session) -> str:

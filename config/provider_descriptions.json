@@ -1,0 +1,82 @@
+{
+  "91token.com": {
+    "description_ru": "91Token — реселлер доступа к Anthropic Claude API по сниженной цене для разработчиков.",
+    "description_en": "91Token — a discounted Anthropic Claude API reseller for developers."
+  },
+  "996444.cn": {
+    "description_ru": "996444 API — агрегатор с широким каталогом моделей OpenAI (включая линейки o1/o3 и GPT-5), Google Gemini и Anthropic Claude по ценам ниже официальных.",
+    "description_en": "996444 API — an aggregator offering a broad catalog of OpenAI (including the o1/o3 and GPT-5 lines), Google Gemini, and Anthropic Claude models below official prices."
+  },
+  "api-top.com": {
+    "description_ru": "Top-API — сервис прямого доступа к AI-моделям из Китая («国内直连AI中转»), предоставляющий Anthropic Claude API по сниженной цене.",
+    "description_en": "Top-API — a China-based direct-connect AI relay service (\"国内直连AI中转\") offering Anthropic Claude API access at a discount."
+  },
+  "apikey.fun": {
+    "description_ru": "APIKEY.FUN — реселлер, специализирующийся на доступе к моделям Anthropic Claude (от Haiku до Opus) по сниженным ценам.",
+    "description_en": "APIKEY.FUN — a reseller specializing in access to Anthropic Claude models (from Haiku to Opus) at discounted prices."
+  },
+  "aruhub.com": {
+    "description_ru": "AruHub — сервис агрегации API больших языковых моделей («AI 大模型 API 聚合服务»), предоставляющий доступ к Anthropic Claude и OpenAI GPT через единый ключ.",
+    "description_en": "AruHub — an AI large-model API aggregation service (\"AI 大模型 API 聚合服务\") providing access to Anthropic Claude and OpenAI GPT through a single key."
+  },
+  "ccwu.cc": {
+    "description_ru": "code28.ccwu.cc — агрегатор API с доступом к моделям Anthropic Claude, Google Gemini и OpenAI GPT по сниженным ценам.",
+    "description_en": "code28.ccwu.cc — an API aggregator offering access to Anthropic Claude, Google Gemini, and OpenAI GPT models at discounted prices."
+  },
+  "codepup.cn": {
+    "description_ru": "代码狗中转站 (CodePup) — AI API-агрегатор и релей, объединяющий Claude API, GPT API, официальные ключи Claude/Azure и DeepSeek в едином шлюзе с общим биллингом и логированием.",
+    "description_en": "代码狗中转站 (CodePup) — an AI API aggregator and relay that consolidates Claude API, GPT API, official Claude/Azure keys, and DeepSeek behind a single gateway with unified billing and logging."
+  },
+  "deepinfra.com": {
+    "description_ru": "DeepInfra — облачная inference-платформа с более чем 100 открытыми и коммерческими моделями (DeepSeek, Meta, Mistral и др.), pay-as-you-go тарификация без контрактов, инфраструктура в дата-центрах США.",
+    "description_en": "DeepInfra — a cloud inference platform hosting 100+ open and commercial models (DeepSeek, Meta, Mistral, and others) with pay-as-you-go pricing, no contracts, and infrastructure in US data centers."
+  },
+  "dragon3api.com": {
+    "description_ru": "newapi.dragon3api.com — релей на базе панели New API, предоставляющий доступ к Anthropic Claude по сниженной цене.",
+    "description_en": "newapi.dragon3api.com — a relay built on the New API panel, offering discounted access to Anthropic Claude."
+  },
+  "gwlink.cc": {
+    "description_ru": "Gwlink API — агрегатор с доступом к моделям Anthropic Claude и Google Gemini через единый ключ по сниженным ценам.",
+    "description_en": "Gwlink API — an aggregator offering access to Anthropic Claude and Google Gemini models through a single key at discounted prices."
+  },
+  "hapiopen.cc": {
+    "description_ru": "HAPI — единый AI API-шлюз для доступа к GPT и Claude через одну конечную точку и OpenAI-совместимый SDK, с гибкой маршрутизацией моделей и прозрачным биллингом.",
+    "description_en": "HAPI — a unified AI API gateway providing access to GPT and Claude through a single endpoint and an OpenAI-compatible SDK, with flexible model routing and transparent billing."
+  },
+  "onehop.ai": {
+    "description_ru": "OneHop — единый уровень доступа к сотням моделей от OpenAI, Anthropic, Google, DeepSeek и других провайдеров через один API-ключ, с многоуровневым резервированием и прозрачным биллингом по использованию.",
+    "description_en": "OneHop — a unified access layer to hundreds of models from OpenAI, Anthropic, Google, DeepSeek, and other providers through a single API key, with multi-layer redundancy and transparent usage-based billing."
+  },
+  "quotarouter.ai": {
+    "description_ru": "QuotaAPI — агрегатор с единым API-ключом, поддерживающим интерфейсы OpenAI, Anthropic и Gemini, с прозрачным ценообразованием и pay-as-you-go биллингом.",
+    "description_en": "QuotaAPI — an aggregator offering a single API key that supports the OpenAI, Anthropic, and Gemini interfaces, with transparent pricing and pay-as-you-go billing."
+  },
+  "relaybases.com": {
+    "description_ru": "RelayBases — релей доступа к моделям Anthropic Claude (Opus, Sonnet) по сниженным ценам.",
+    "description_en": "RelayBases — a relay providing discounted access to Anthropic Claude models (Opus, Sonnet)."
+  },
+  "ssnaiyun.com": {
+    "description_ru": "SSN AI — реселлер доступа к моделям Anthropic Claude (Haiku, Opus) по сниженным ценам.",
+    "description_en": "SSN AI — a reseller offering discounted access to Anthropic Claude models (Haiku, Opus)."
+  },
+  "weekly-day.top": {
+    "description_ru": "星期天AI (Weekly Day) — единый AI API-шлюз с панелью управления, дающий доступ к моделям Anthropic Claude и Google Gemini.",
+    "description_en": "星期天AI (Weekly Day) — a unified AI API gateway with an admin dashboard, providing access to Anthropic Claude and Google Gemini models."
+  },
+  "x-llm.net": {
+    "description_ru": "x-llm.net — релей на базе панели New API, предоставляющий доступ к Anthropic Claude по сниженной цене.",
+    "description_en": "x-llm.net — a relay built on the New API panel, offering discounted access to Anthropic Claude."
+  },
+  "xeduapi.com": {
+    "description_ru": "Xeduapi API — релей на базе панели New API с доступом к моделям DeepSeek и OpenAI GPT по сниженным ценам.",
+    "description_en": "Xeduapi API — a relay built on the New API panel, offering access to DeepSeek and OpenAI GPT models at discounted prices."
+  },
+  "xiaojingai.com": {
+    "description_ru": "Xiaojingai API — релей на базе панели New API с доступом к моделям Google Gemini и OpenAI GPT по сниженным ценам.",
+    "description_en": "Xiaojingai API — a relay built on the New API panel, offering access to Google Gemini and OpenAI GPT models at discounted prices."
+  },
+  "zivv.pro": {
+    "description_ru": "Zivv API — AI-шлюз с единым эндпоинтом для протоколов OpenAI, Anthropic и Gemini, позиционируется как способ получить Claude и GPT по значительно сниженной цене по сравнению с официальными тарифами.",
+    "description_en": "Zivv API — an AI gateway with a single endpoint for the OpenAI, Anthropic, and Gemini protocols, positioned as a way to access Claude and GPT at prices significantly below official rates."
+  }
+}

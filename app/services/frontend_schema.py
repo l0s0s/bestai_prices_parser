@@ -33,6 +33,8 @@ FRONTEND_JSON_SCHEMA = {
             "source_url": {"type": "string"},
             "last_checked_at": {"type": "string"},
             "payment_methods": {"type": "array", "items": {"type": "string"}},
+            "domain_created_at": {"type": ["string", "null"]},
+            "domain_age_days": {"type": ["integer", "null"]},
         },
     },
 }
@@ -95,3 +97,26 @@ API_DESCRIPTIONS_JSON_SCHEMA = {
 def validate_api_descriptions_json(data: list) -> None:
     """Validate the public/data/api_descriptions.json output list against its schema."""
     jsonschema.validate(instance=data, schema=API_DESCRIPTIONS_JSON_SCHEMA)
+
+
+PROVIDER_DESCRIPTIONS_JSON_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "provider_domain",
+            "description_ru",
+            "description_en",
+        ],
+        "properties": {
+            "provider_domain": {"type": "string"},
+            "description_ru": {"type": "string"},
+            "description_en": {"type": "string"},
+        },
+    },
+}
+
+
+def validate_provider_descriptions_json(data: list) -> None:
+    """Validate the public/data/provider_descriptions.json output list against its schema."""
+    jsonschema.validate(instance=data, schema=PROVIDER_DESCRIPTIONS_JSON_SCHEMA)

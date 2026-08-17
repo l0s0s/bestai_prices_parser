@@ -396,6 +396,8 @@ def select_publishable_prices(db: Session) -> List[dict]:
                 "source_url": price.source_url,
                 "last_checked_at": price.last_checked_at.isoformat() + "Z" if price.last_checked_at else datetime.utcnow().isoformat() + "Z",
                 "payment_methods": get_payment_methods(provider.domain, payment_methods_map),
+                "domain_created_at": provider.domain_created_at.isoformat() + "Z" if provider.domain_created_at else None,
+                "domain_age_days": provider.domain_age_days,
             })
 
     return _dedupe_publishable_rows(publishable)

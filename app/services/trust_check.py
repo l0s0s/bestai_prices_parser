@@ -1,9 +1,13 @@
+import json
 from datetime import datetime
+from pathlib import Path
 from typing import Tuple, Optional
 import httpx
 from sqlalchemy.orm import Session
 
+from app.db import SessionLocal
 from app.models import Provider
+from app.services.exporter import export_frontend_json_atomically
 from app.settings import settings
 from app.logging_setup import logger
 
@@ -72,3 +76,52 @@ def update_trust_signals(provider: Provider, db: Session) -> None:
 
     provider.last_checked_at = datetime.utcnow()
     db.commit()
+
+
+def sync_domain_age_into_frontend_json() -> int:
+    """Refresh domain_created_at/domain_age_days on the already-published
+    public/data/providers.json from the values already stored on each
+    Provider row, without re-running the full pipeline (no new RDAP calls).
+
+    Mirrors sync_payment_methods_into_frontend_json in
+    app/services/payment_methods.py: reads the existing export as-is,
+    overwrites each row's two domain-age fields by provider_domain lookup,
+    and writes the result back atomically. Every other field is left
+    untouched. Returns the number of rows whose domain-age fields actually
+    changed."""
+    target_path = Path(settings.frontend_json_path)
+    if not target_path.exists():
+        raise FileNotFoundError(
+            f"{target_path} does not exist yet; run the full pipeline (update-all) at least once first."
+        )
+
+    with open(target_path, "r", encoding="utf-8") as f:
+        rows = json.load(f)
+
+    db: Session = SessionLocal()
+    try:
+        providers_by_domain = {p.domain: p for p in db.query(Provider).all()}
+
+        changed = 0
+        for row in rows:
+            provider = providers_by_domain.get(row.get("provider_domain", ""))
+            new_created_at = (
+                provider.domain_created_at.isoformat() + "Z"
+                if provider and provider.domain_created_at
+                else None
+            )
+            new_age_days = provider.domain_age_days if provider else None
+
+            if row.get("domain_created_at") != new_created_at or row.get("domain_age_days") != new_age_days:
+                changed += 1
+            row["domain_created_at"] = new_created_at
+            row["domain_age_days"] = new_age_days
+    finally:
+        db.close()
+
+    export_frontend_json_atomically(rows)
+    logger.info(
+        f"Synced domain age for {len(rows)} rows ({changed} changed) into {target_path}.",
+        extra={"pipeline_step": "sync_domain_age"},
+    )
+    return changed

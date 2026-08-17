@@ -2,8 +2,10 @@ import typer
 from app.db import init_db as db_init
 from app.services.provider_discovery import crawl_enabled_sources, normalize_and_deduplicate
 from app.services.payment_methods import sync_payment_methods_into_frontend_json
+from app.services.trust_check import sync_domain_age_into_frontend_json
 from app.services.api_descriptions import build_api_descriptions
-from app.services.exporter import export_api_descriptions_json_atomically
+from app.services.provider_descriptions import build_provider_descriptions
+from app.services.exporter import export_api_descriptions_json_atomically, export_provider_descriptions_json_atomically
 from app.orchestrator import run_update_all, RunSummary
 
 app = typer.Typer(help="CLI tool for BestAIPrice parser")
@@ -66,6 +68,25 @@ def generate_api_descriptions_cmd():
     rows = build_api_descriptions()
     export_api_descriptions_json_atomically(rows)
     typer.echo(f"Wrote {len(rows)} vendor card(s) to public/data/api_descriptions.json.")
+
+
+@app.command("sync-domain-age")
+def sync_domain_age_cmd():
+    """Refresh domain_created_at/domain_age_days in public/data/providers.json
+    from values already stored in the database, without re-running the full
+    pipeline (no new RDAP calls)."""
+    changed = sync_domain_age_into_frontend_json()
+    typer.echo(f"Updated domain age fields for {changed} row(s) in public/data/providers.json.")
+
+
+@app.command("generate-provider-descriptions")
+def generate_provider_descriptions_cmd():
+    """Render public/data/provider_descriptions.json (per-reseller intro
+    cards) from config/provider_descriptions.json. Independent of the crawl
+    pipeline."""
+    rows = build_provider_descriptions()
+    export_provider_descriptions_json_atomically(rows)
+    typer.echo(f"Wrote {len(rows)} provider description(s) to public/data/provider_descriptions.json.")
 
 
 if __name__ == "__main__":
