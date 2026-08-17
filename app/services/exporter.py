@@ -6,7 +6,11 @@ from typing import List
 from sqlalchemy.orm import Session
 
 from app.models import ProviderPrice
-from app.services.frontend_schema import validate_frontend_json, validate_model_catalog_json
+from app.services.frontend_schema import (
+    validate_frontend_json,
+    validate_model_catalog_json,
+    validate_api_descriptions_json,
+)
 from app.settings import settings
 from app.logging_setup import logger
 
@@ -49,6 +53,24 @@ def export_models_json_atomically(rows: List[dict]) -> None:
 
     os.replace(tmp_path, target_path)
     logger.info(f"Successfully exported {len(rows)} records to {target_path}", extra={"pipeline_step": "export_models"})
+
+
+def export_api_descriptions_json_atomically(rows: List[dict]) -> None:
+    """Atomically write public/data/api_descriptions.json after schema validation."""
+    target_path = Path(settings.api_descriptions_json_path)
+    target_path.parent.mkdir(parents=True, exist_ok=True)
+
+    tmp_path = target_path.with_suffix(".json.tmp")
+
+    validate_api_descriptions_json(rows)
+
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(rows, f, ensure_ascii=False, indent=2)
+
+    os.chmod(tmp_path, 0o644)
+
+    os.replace(tmp_path, target_path)
+    logger.info(f"Successfully exported {len(rows)} records to {target_path}", extra={"pipeline_step": "export_api_descriptions"})
 
 
 def export_review_csv(db: Session) -> str:

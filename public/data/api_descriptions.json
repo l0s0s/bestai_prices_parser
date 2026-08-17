@@ -1,0 +1,42 @@
+[
+  {
+    "vendor_slug": "anthropic",
+    "display_name": "Anthropic",
+    "title_ru": "Дешёвый Anthropic API",
+    "description_ru": "Здесь показаны предложения Anthropic API от разных поставщиков и агрегаторов. Сравните цену входных и выходных токенов, проверьте поддержку нужных функций и выберите самый выгодный API-маршрут для подключения модели к приложению, боту, SaaS-продукту или внутреннему AI-инструменту. Таблица помогает найти модель дешевле официальной цены и быстро перейти к поставщику с подходящими условиями. Вы можете сравнить доступные способы оплаты, рейтинг поставщика, отзывы, возраст сервиса, поддерживаемые возможности модели, лимиты запросов и другие важные условия перед выбором API-провайдера.",
+    "title_en": "Cheap Anthropic API",
+    "description_en": "Here you'll find Anthropic API offers from different providers and aggregators. Compare input and output token prices, check support for the features you need, and choose the best API route for connecting the model to your app, bot, SaaS product, or internal AI tool. The table helps you find a model cheaper than the official price and quickly reach a provider with suitable terms. You can compare available payment methods, provider rating, reviews, service age, supported model capabilities, request limits, and other important conditions before choosing an API provider."
+  },
+  {
+    "vendor_slug": "deepseek",
+    "display_name": "DeepSeek",
+    "title_ru": "Дешёвый DeepSeek API",
+    "description_ru": "Здесь показаны предложения DeepSeek API от разных поставщиков и агрегаторов. Сравните цену входных и выходных токенов, проверьте поддержку нужных функций и выберите самый выгодный API-маршрут для подключения модели к приложению, боту, SaaS-продукту или внутреннему AI-инструменту. Таблица помогает найти модель дешевле официальной цены и быстро перейти к поставщику с подходящими условиями. Вы можете сравнить доступные способы оплаты, рейтинг поставщика, отзывы, возраст сервиса, поддерживаемые возможности модели, лимиты запросов и другие важные условия перед выбором API-провайдера.",
+    "title_en": "Cheap DeepSeek API",
+    "description_en": "Here you'll find DeepSeek API offers from different providers and aggregators. Compare input and output token prices, check support for the features you need, and choose the best API route for connecting the model to your app, bot, SaaS product, or internal AI tool. The table helps you find a model cheaper than the official price and quickly reach a provider with suitable terms. You can compare available payment methods, provider rating, reviews, service age, supported model capabilities, request limits, and other important conditions before choosing an API provider."
+  },
+  {
+    "vendor_slug": "generic",
+    "display_name": "AI",
+    "title_ru": "Дешёвый AI API",
+    "description_ru": "Здесь показаны предложения AI API от разных поставщиков и агрегаторов. Сравните цену входных и выходных токенов, проверьте поддержку нужных функций и выберите самый выгодный API-маршрут для подключения модели к приложению, боту, SaaS-продукту или внутреннему AI-инструменту. Таблица помогает найти модель дешевле официальной цены и быстро перейти к поставщику с подходящими условиями. Вы можете сравнить доступные способы оплаты, рейтинг поставщика, отзывы, возраст сервиса, поддерживаемые возможности модели, лимиты запросов и другие важные условия перед выбором API-провайдера.",
+    "title_en": "Cheap AI API",
+    "description_en": "Here you'll find AI API offers from different providers and aggregators. Compare input and output token prices, check support for the features you need, and choose the best API route for connecting the model to your app, bot, SaaS product, or internal AI tool. The table helps you find a model cheaper than the official price and quickly reach a provider with suitable terms. You can compare available payment methods, provider rating, reviews, service age, supported model capabilities, request limits, and other important conditions before choosing an API provider."
+  },
+  {
+    "vendor_slug": "google",
+    "display_name": "Google",
+    "title_ru": "Дешёвый Google API",
+    "description_ru": "Здесь показаны предложения Google API от разных поставщиков и агрегаторов. Сравните цену входных и выходных токенов, проверьте поддержку нужных функций и выберите самый выгодный API-маршрут для подключения модели к приложению, боту, SaaS-продукту или внутреннему AI-инструменту. Таблица помогает найти модель дешевле официальной цены и быстро перейти к поставщику с подходящими условиями. Вы можете сравнить доступные способы оплаты, рейтинг поставщика, отзывы, возраст сервиса, поддерживаемые возможности модели, лимиты запросов и другие важные условия перед выбором API-провайдера.",
+    "title_en": "Cheap Google API",
+    "description_en": "Here you'll find Google API offers from different providers and aggregators. Compare input and output token prices, check support for the features you need, and choose the best API route for connecting the model to your app, bot, SaaS product, or internal AI tool. The table helps you find a model cheaper than the official price and quickly reach a provider with suitable terms. You can compare available payment methods, provider rating, reviews, service age, supported model capabilities, request limits, and other important conditions before choosing an API provider."
+  },
+  {
+    "vendor_slug": "openai",
+    "display_name": "OpenAI",
+    "title_ru": "Дешёвый OpenAI API",
+    "description_ru": "Здесь показаны предложения OpenAI API от разных поставщиков и агрегаторов. Сравните цену входных и выходных токенов, проверьте поддержку нужных функций и выберите самый выгодный API-маршрут для подключения модели к приложению, боту, SaaS-продукту или внутреннему AI-инструменту. Таблица помогает найти модель дешевле официальной цены и быстро перейти к поставщику с подходящими условиями. Вы можете сравнить доступные способы оплаты, рейтинг поставщика, отзывы, возраст сервиса, поддерживаемые возможности модели, лимиты запросов и другие важные условия перед выбором API-провайдера.",
+    "title_en": "Cheap OpenAI API",
+    "description_en": "Here you'll find OpenAI API offers from different providers and aggregators. Compare input and output token prices, check support for the features you need, and choose the best API route for connecting the model to your app, bot, SaaS product, or internal AI tool. The table helps you find a model cheaper than the official price and quickly reach a provider with suitable terms. You can compare available payment methods, provider rating, reviews, service age, supported model capabilities, request limits, and other important conditions before choosing an API provider."
+  }
+]

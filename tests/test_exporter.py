@@ -1,6 +1,10 @@
 import json
 import pytest
-from app.services.exporter import export_frontend_json_atomically, export_models_json_atomically
+from app.services.exporter import (
+    export_frontend_json_atomically,
+    export_models_json_atomically,
+    export_api_descriptions_json_atomically,
+)
 from app.services.frontend_schema import FRONTEND_JSON_SCHEMA
 
 
@@ -55,3 +59,26 @@ def test_export_models_json_atomically(tmp_path, monkeypatch):
     content = json.loads(target.read_text(encoding="utf-8"))
     assert len(content) == 1
     assert content[0]["canonical_model_id"] == "openai/gpt-4o"
+
+
+def test_export_api_descriptions_json_atomically(tmp_path, monkeypatch):
+    target = tmp_path / "api_descriptions.json"
+    monkeypatch.setattr("app.settings.settings.api_descriptions_json_path", str(target))
+
+    sample_data = [
+        {
+            "vendor_slug": "anthropic",
+            "display_name": "Anthropic",
+            "title_ru": "Дешёвый Anthropic API",
+            "description_ru": "Описание",
+            "title_en": "Cheap Anthropic API",
+            "description_en": "Description",
+        }
+    ]
+
+    export_api_descriptions_json_atomically(sample_data)
+
+    assert target.exists()
+    content = json.loads(target.read_text(encoding="utf-8"))
+    assert len(content) == 1
+    assert content[0]["vendor_slug"] == "anthropic"

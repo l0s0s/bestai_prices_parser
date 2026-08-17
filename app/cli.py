@@ -2,6 +2,8 @@ import typer
 from app.db import init_db as db_init
 from app.services.provider_discovery import crawl_enabled_sources, normalize_and_deduplicate
 from app.services.payment_methods import sync_payment_methods_into_frontend_json
+from app.services.api_descriptions import build_api_descriptions
+from app.services.exporter import export_api_descriptions_json_atomically
 from app.orchestrator import run_update_all, RunSummary
 
 app = typer.Typer(help="CLI tool for BestAIPrice parser")
@@ -55,6 +57,15 @@ def sync_payment_methods_cmd():
     config/payment_methods.json without re-running the full pipeline."""
     changed = sync_payment_methods_into_frontend_json()
     typer.echo(f"Updated payment_methods for {changed} row(s) in public/data/providers.json.")
+
+
+@app.command("generate-api-descriptions")
+def generate_api_descriptions_cmd():
+    """Render public/data/api_descriptions.json (per-vendor "cheap API" intro
+    cards) from config/api_vendors.json. Independent of the crawl pipeline."""
+    rows = build_api_descriptions()
+    export_api_descriptions_json_atomically(rows)
+    typer.echo(f"Wrote {len(rows)} vendor card(s) to public/data/api_descriptions.json.")
 
 
 if __name__ == "__main__":
