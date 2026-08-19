@@ -5,7 +5,7 @@ from app.services.payment_methods import sync_payment_methods_into_frontend_json
 from app.services.auth_providers import sync_auth_providers_into_frontend_json
 from app.services.trust_check import sync_domain_age_into_frontend_json, update_domain_age_for_all_providers
 from app.services.api_descriptions import build_api_descriptions
-from app.services.provider_descriptions import build_provider_descriptions
+from app.services.provider_descriptions import build_provider_descriptions, load_published_provider_domains
 from app.services.exporter import export_api_descriptions_json_atomically, export_provider_descriptions_json_atomically
 from app.orchestrator import run_update_all, RunSummary
 
@@ -114,9 +114,13 @@ def sync_domain_age_cmd():
 @app.command("generate-provider-descriptions")
 def generate_provider_descriptions_cmd():
     """Render public/data/provider_descriptions.json (per-reseller intro
-    cards) from config/provider_descriptions.json. Independent of the crawl
-    pipeline."""
-    rows = build_provider_descriptions()
+    cards) from config/provider_descriptions.json, keeping only providers
+    currently present in public/data/providers.json — a stale or
+    not-yet-published domain in the config file is skipped rather than
+    published. Reads providers.json but doesn't modify it; independent of
+    the crawl pipeline."""
+    published_domains = load_published_provider_domains()
+    rows = build_provider_descriptions(published_domains=published_domains)
     export_provider_descriptions_json_atomically(rows)
     typer.echo(f"Wrote {len(rows)} provider description(s) to public/data/provider_descriptions.json.")
 
