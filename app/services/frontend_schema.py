@@ -33,6 +33,8 @@ FRONTEND_JSON_SCHEMA = {
             "source_url": {"type": "string"},
             "last_checked_at": {"type": "string"},
             "payment_methods": {"type": "array", "items": {"type": "string"}},
+            "domain_created_at": {"type": ["string", "null"]},
+            "domain_age_days": {"type": ["integer", "null"]},
         },
     },
 }
@@ -66,3 +68,55 @@ MODEL_CATALOG_JSON_SCHEMA = {
 def validate_model_catalog_json(data: list) -> None:
     """Validate the public/data/models.json output list against its schema."""
     jsonschema.validate(instance=data, schema=MODEL_CATALOG_JSON_SCHEMA)
+
+
+API_DESCRIPTIONS_JSON_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "vendor_slug",
+            "display_name",
+            "title_ru",
+            "description_ru",
+            "title_en",
+            "description_en",
+        ],
+        "properties": {
+            "vendor_slug": {"type": "string"},
+            "display_name": {"type": "string"},
+            "title_ru": {"type": "string"},
+            "description_ru": {"type": "string"},
+            "title_en": {"type": "string"},
+            "description_en": {"type": "string"},
+        },
+    },
+}
+
+
+def validate_api_descriptions_json(data: list) -> None:
+    """Validate the public/data/api_descriptions.json output list against its schema."""
+    jsonschema.validate(instance=data, schema=API_DESCRIPTIONS_JSON_SCHEMA)
+
+
+PROVIDER_DESCRIPTIONS_JSON_SCHEMA = {
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "provider_domain",
+            "description_ru",
+            "description_en",
+        ],
+        "properties": {
+            "provider_domain": {"type": "string"},
+            "description_ru": {"type": "string"},
+            "description_en": {"type": "string"},
+        },
+    },
+}
+
+
+def validate_provider_descriptions_json(data: list) -> None:
+    """Validate the public/data/provider_descriptions.json output list against its schema."""
+    jsonschema.validate(instance=data, schema=PROVIDER_DESCRIPTIONS_JSON_SCHEMA)

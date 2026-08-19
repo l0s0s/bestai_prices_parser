@@ -26,9 +26,14 @@ class Settings(BaseSettings):
     official_prices_file: str = "config/official_prices.json"
     extraction_prompt_file: str = "config/extraction_prompt.txt"
     fx_rates_file: str = "config/fx_rates.json"
+    api_vendors_file: str = "config/api_vendors.json"
+    provider_descriptions_file: str = "config/provider_descriptions.json"
 
     frontend_json_path: str = "public/data/providers.json"
+    auth_providers_file: str = "public/data/auth_providers.json"
     models_json_path: str = "public/data/models.json"
+    api_descriptions_json_path: str = "public/data/api_descriptions.json"
+    provider_descriptions_json_path: str = "public/data/provider_descriptions.json"
     enable_model_catalog_export: bool = False  # temporarily off; see app/orchestrator.py
     review_csv_path: str = "exports/review_prices.csv"
     snapshots_dir: str = "snapshots"

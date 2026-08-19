@@ -14,7 +14,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -31,7 +33,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -48,7 +52,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -65,7 +71,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -82,7 +90,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -99,7 +109,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "APIKEY.FUN",
@@ -116,7 +128,9 @@
     "trust_status": "yellow",
     "source_url": "https://apikey.fun/pricing",
     "last_checked_at": "2026-08-08T11:31:39.433525Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-13T17:13:27Z",
+    "domain_age_days": 151
   },
   {
     "provider_name": "DeepInfra",
@@ -133,7 +147,9 @@
     "trust_status": "yellow",
     "source_url": "https://deepinfra.com/pricing",
     "last_checked_at": "2026-08-08T11:34:25.739637Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2017-12-08T20:14:13Z",
+    "domain_age_days": 3168
   },
   {
     "provider_name": "Xeduapi API",
@@ -150,7 +166,9 @@
     "trust_status": "yellow",
     "source_url": "https://xeduapi.com/pricing",
     "last_checked_at": "2026-08-08T12:18:46.219334Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2023-09-03T14:30:31Z",
+    "domain_age_days": 1073
   },
   {
     "provider_name": "Xeduapi API",
@@ -167,7 +185,9 @@
     "trust_status": "yellow",
     "source_url": "https://xeduapi.com/pricing",
     "last_checked_at": "2026-08-08T12:18:46.219334Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2023-09-03T14:30:31Z",
+    "domain_age_days": 1073
   },
   {
     "provider_name": "Xeduapi API",
@@ -184,7 +204,9 @@
     "trust_status": "yellow",
     "source_url": "https://xeduapi.com/pricing",
     "last_checked_at": "2026-08-08T12:18:46.219334Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2023-09-03T14:30:31Z",
+    "domain_age_days": 1073
   },
   {
     "provider_name": "996444 API",
@@ -201,7 +223,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -218,7 +242,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -235,7 +261,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -252,7 +280,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -269,7 +299,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -286,7 +318,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -303,7 +337,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -320,7 +356,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -337,7 +375,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -354,7 +394,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -371,7 +413,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -388,7 +432,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -405,7 +451,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -422,7 +470,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -439,7 +489,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -456,7 +508,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -473,7 +527,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -490,7 +546,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -507,7 +565,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -524,7 +584,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -541,7 +603,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -558,7 +622,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -575,7 +641,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -592,7 +660,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -609,7 +679,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -626,7 +698,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -643,7 +717,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -660,7 +736,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "996444 API",
@@ -677,7 +755,9 @@
     "trust_status": "yellow",
     "source_url": "https://api.996444.cn/pricing",
     "last_checked_at": "2026-08-08T12:54:09.746611Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "Xiaojingai API",
@@ -694,7 +774,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -711,7 +793,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -728,7 +812,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -745,7 +831,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -762,7 +850,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -779,7 +869,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -796,7 +888,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "Xiaojingai API",
@@ -813,7 +907,9 @@
     "trust_status": "yellow",
     "source_url": "https://open.xiaojingai.com/pricing",
     "last_checked_at": "2026-08-08T12:57:06.106980Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2024-09-20T02:57:21Z",
+    "domain_age_days": 690
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -830,7 +926,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -847,7 +945,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -864,7 +964,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -881,7 +983,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -898,7 +1002,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -915,7 +1021,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -932,7 +1040,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -949,7 +1059,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -966,7 +1078,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -983,7 +1097,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -1000,7 +1116,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -1017,7 +1135,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -1034,7 +1154,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -1051,7 +1173,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "code28.ccwu.cc",
@@ -1068,7 +1192,9 @@
     "trust_status": "yellow",
     "source_url": "https://code28.ccwu.cc/pricing",
     "last_checked_at": "2026-08-08T13:03:46.476400Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2025-08-17T11:49:59Z",
+    "domain_age_days": 359
   },
   {
     "provider_name": "x-llm.net",
@@ -1085,7 +1211,9 @@
     "trust_status": "yellow",
     "source_url": "https://x-llm.net/pricing",
     "last_checked_at": "2026-08-08T13:05:08.554074Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-12T03:34:00Z",
+    "domain_age_days": 60
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1102,7 +1230,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1119,7 +1249,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1136,7 +1268,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1153,7 +1287,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1170,7 +1306,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1187,7 +1325,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1204,7 +1344,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1221,7 +1363,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1238,7 +1382,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1255,7 +1401,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1272,7 +1420,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1289,7 +1439,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1306,7 +1458,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "www.weekly-day.top",
@@ -1323,7 +1477,9 @@
     "trust_status": "yellow",
     "source_url": "https://www.weekly-day.top/pricing",
     "last_checked_at": "2026-08-08T13:09:14.969877Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-19T15:04:09Z",
+    "domain_age_days": 23
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1340,7 +1496,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1357,7 +1515,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1374,7 +1534,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1391,7 +1553,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1408,7 +1572,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1425,7 +1591,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1442,7 +1610,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1459,7 +1629,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "api.codepup.cn",
@@ -1476,7 +1648,9 @@
     "trust_status": "yellow",
     "source_url": "https://ai.codepup.cn/api-relay-ranking",
     "last_checked_at": "2026-08-08T13:10:43.015640Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": null,
+    "domain_age_days": null
   },
   {
     "provider_name": "91token.com",
@@ -1493,7 +1667,9 @@
     "trust_status": "yellow",
     "source_url": "https://91token.com/pricing",
     "last_checked_at": "2026-08-08T13:17:25.419615Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2017-06-12T11:10:49Z",
+    "domain_age_days": 3347
   },
   {
     "provider_name": "ssnaiyun.com",
@@ -1510,7 +1686,9 @@
     "trust_status": "yellow",
     "source_url": "https://ssnaiyun.com/pricing",
     "last_checked_at": "2026-08-08T13:22:29.305131Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-04T13:19:16Z",
+    "domain_age_days": 68
   },
   {
     "provider_name": "ssnaiyun.com",
@@ -1527,7 +1705,9 @@
     "trust_status": "yellow",
     "source_url": "https://ssnaiyun.com/pricing",
     "last_checked_at": "2026-08-08T13:22:29.305131Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-04T13:19:16Z",
+    "domain_age_days": 68
   },
   {
     "provider_name": "zivv.pro",
@@ -1544,7 +1724,9 @@
     "trust_status": "yellow",
     "source_url": "https://zivv.pro/register",
     "last_checked_at": "2026-08-08T13:24:56.191283Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-01-31T14:50:00.107000Z",
+    "domain_age_days": 192
   },
   {
     "provider_name": "zivv.pro",
@@ -1561,7 +1743,9 @@
     "trust_status": "yellow",
     "source_url": "https://zivv.pro/register",
     "last_checked_at": "2026-08-08T13:24:56.191283Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-01-31T14:50:00.107000Z",
+    "domain_age_days": 192
   },
   {
     "provider_name": "zivv.pro",
@@ -1578,7 +1762,9 @@
     "trust_status": "yellow",
     "source_url": "https://zivv.pro/register",
     "last_checked_at": "2026-08-08T13:24:56.191283Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-01-31T14:50:00.107000Z",
+    "domain_age_days": 192
   },
   {
     "provider_name": "relaybases.com",
@@ -1595,7 +1781,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "relaybases.com",
@@ -1612,7 +1800,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "relaybases.com",
@@ -1629,7 +1819,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "relaybases.com",
@@ -1646,7 +1838,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "relaybases.com",
@@ -1663,7 +1857,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "relaybases.com",
@@ -1680,7 +1876,9 @@
     "trust_status": "yellow",
     "source_url": "https://relaybases.com/pricing",
     "last_checked_at": "2026-08-08T13:30:10.587025Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-03-31T06:34:23Z",
+    "domain_age_days": 133
   },
   {
     "provider_name": "newapi.dragon3api.com",
@@ -1697,7 +1895,9 @@
     "trust_status": "yellow",
     "source_url": "https://newapi.dragon3api.com/pricing",
     "last_checked_at": "2026-08-08T13:31:25.888330Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-15T04:12:52Z",
+    "domain_age_days": 27
   },
   {
     "provider_name": "Gwlink API",
@@ -1714,7 +1914,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1731,7 +1933,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1748,7 +1952,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1765,7 +1971,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1782,7 +1990,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1799,7 +2009,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1816,7 +2028,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1833,7 +2047,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1850,7 +2066,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1867,7 +2085,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1884,7 +2104,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1901,7 +2123,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "Gwlink API",
@@ -1918,7 +2142,9 @@
     "trust_status": "yellow",
     "source_url": "https://gwlink.cc/pricing",
     "last_checked_at": "2026-08-08T13:39:27.896351Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-23T06:06:03Z",
+    "domain_age_days": 80
   },
   {
     "provider_name": "onehop.ai",
@@ -1935,7 +2161,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -1952,7 +2180,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -1969,7 +2199,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -1986,7 +2218,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2003,7 +2237,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2020,7 +2256,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2037,7 +2275,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2054,7 +2294,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2071,7 +2313,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2088,7 +2332,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2105,7 +2351,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2122,7 +2370,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2139,7 +2389,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "onehop.ai",
@@ -2156,7 +2408,9 @@
     "trust_status": "yellow",
     "source_url": "https://onehop.ai/pricing",
     "last_checked_at": "2026-08-08T13:52:21.408716Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-05-20T03:22:17.507000Z",
+    "domain_age_days": 84
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2173,7 +2427,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2190,7 +2446,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2207,7 +2465,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2224,7 +2484,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2241,7 +2503,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "hapiopen.cc",
@@ -2258,7 +2522,9 @@
     "trust_status": "yellow",
     "source_url": "https://hapiopen.cc/model-market-content",
     "last_checked_at": "2026-08-08T13:55:18.193546Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-13T15:35:00Z",
+    "domain_age_days": 29
   },
   {
     "provider_name": "api-top.com",
@@ -2275,7 +2541,9 @@
     "trust_status": "yellow",
     "source_url": "https://api-top.com/pricing",
     "last_checked_at": "2026-08-08T13:56:23.192373Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-02T07:12:28Z",
+    "domain_age_days": 40
   },
   {
     "provider_name": "api-top.com",
@@ -2292,7 +2560,9 @@
     "trust_status": "yellow",
     "source_url": "https://api-top.com/pricing",
     "last_checked_at": "2026-08-08T13:56:23.192373Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-07-02T07:12:28Z",
+    "domain_age_days": 40
   },
   {
     "provider_name": "aruhub.com",
@@ -2309,7 +2579,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2326,7 +2598,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2343,7 +2617,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2360,7 +2636,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2377,7 +2655,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2394,7 +2674,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2411,7 +2693,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2428,7 +2712,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2445,7 +2731,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "aruhub.com",
@@ -2462,7 +2750,9 @@
     "trust_status": "yellow",
     "source_url": "https://aruhub.com/pricing",
     "last_checked_at": "2026-08-08T14:00:07.282284Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-14T04:50:54Z",
+    "domain_age_days": 58
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2479,7 +2769,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2496,7 +2788,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2513,7 +2807,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2530,7 +2826,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2547,7 +2845,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2564,7 +2864,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2581,7 +2883,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2598,7 +2902,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2615,7 +2921,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2632,7 +2940,9 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   },
   {
     "provider_name": "quotarouter.ai",
@@ -2649,6 +2959,8 @@
     "trust_status": "yellow",
     "source_url": "https://quotarouter.ai/pricing",
     "last_checked_at": "2026-08-08T14:06:22.243622Z",
-    "payment_methods": []
+    "payment_methods": [],
+    "domain_created_at": "2026-06-09T07:14:38.652000Z",
+    "domain_age_days": 63
   }
 ]
