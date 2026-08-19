@@ -46,10 +46,11 @@ def sync_auth_providers_into_frontend_json() -> int:
     Existing rows sourced from the crawl pipeline are never overwritten or
     removed. Returns the number of rows added.
 
-    Note: `update-all` rebuilds providers.json from the database from
-    scratch and knows nothing about public/data/auth_providers.json, so re-run
-    this command after every `update-all` if the auth-only providers should
-    keep showing up in the published output.
+    `update-all` (see app/orchestrator.py) calls this automatically right
+    after it rebuilds providers.json from the database, so the auth-only
+    providers keep showing up in the published output without a manual step.
+    Call this directly only when publishing an edit to
+    public/data/auth_providers.json without re-running the full pipeline.
     """
     target_path = Path(settings.frontend_json_path)
     if not target_path.exists():

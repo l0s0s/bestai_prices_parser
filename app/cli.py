@@ -42,6 +42,7 @@ def update_all_cmd():
     typer.echo(f"prices_extracted        : {summary.prices_extracted}")
     typer.echo(f"prices_published        : {summary.prices_published}")
     typer.echo(f"models_published        : {summary.models_published}")
+    typer.echo(f"auth_providers_added    : {summary.auth_providers_added}")
     typer.echo(f"records_needing_review  : {summary.records_needing_review}")
     typer.echo(f"errors_count            : {summary.errors_count}")
     typer.echo(f"duration_seconds        : {summary.duration_seconds}s")
@@ -68,9 +69,9 @@ def sync_auth_providers_cmd():
     public/data/providers.json, adding only rows not already present there
     (providers whose pricing requires login/signup and so can't be
     auto-scraped; curated by hand instead). Existing rows are never
-    overwritten. Run after editing public/data/auth_providers.json, and again
-    after any update-all (which rebuilds providers.json from the DB and
-    drops these rows)."""
+    overwritten. update-all now runs this automatically at the end of every
+    full pipeline run; use this command standalone only after editing
+    public/data/auth_providers.json without re-running the full pipeline."""
     added = sync_auth_providers_into_frontend_json()
     typer.echo(f"Added {added} row(s) from public/data/auth_providers.json into public/data/providers.json.")
 

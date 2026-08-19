@@ -13,6 +13,7 @@ from app.crawler.cleaner import clean_html, save_snapshot
 from app.ai.extractor import extract_prices_with_ai
 from app.services.price_extraction import validate_ai_result, save_prices, select_publishable_prices, select_model_catalog, expire_unconfirmed_prices
 from app.services.payment_methods import load_payment_methods_map, save_payment_methods_map, ensure_payment_methods_entry
+from app.services.auth_providers import sync_auth_providers_into_frontend_json
 from app.services.trust_check import update_trust_signals
 from app.services.exporter import export_frontend_json_atomically, export_models_json_atomically, export_review_csv
 from app.settings import settings
@@ -28,6 +29,7 @@ class RunSummary:
     prices_extracted: int = 0
     prices_published: int = 0
     models_published: int = 0
+    auth_providers_added: int = 0
     records_needing_review: int = 0
     errors_count: int = 0
     duration_seconds: float = 0.0
@@ -124,6 +126,16 @@ def run_update_all() -> RunSummary:
         except Exception as e:
             logger.error(f"Atomic frontend export failed: {e}", extra={"pipeline_step": "export_frontend", "error_type": type(e).__name__})
             summary.hard_failure = True
+        else:
+            # Re-merge the hand-curated auth-only-provider rows (login/signup
+            # required, so they can't be crawled) back into providers.json,
+            # since the export above just rebuilt it from the DB alone and
+            # dropped them. Best-effort: a failure here doesn't invalidate
+            # the crawl-sourced export that already succeeded.
+            try:
+                summary.auth_providers_added = sync_auth_providers_into_frontend_json()
+            except Exception as e:
+                logger.error(f"Syncing auth_providers.json failed: {e}", extra={"pipeline_step": "sync_auth_providers", "error_type": type(e).__name__})
 
         if settings.enable_model_catalog_export:
             model_catalog_rows = select_model_catalog(publishable_rows)
