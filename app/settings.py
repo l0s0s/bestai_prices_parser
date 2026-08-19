@@ -30,6 +30,7 @@ class Settings(BaseSettings):
     provider_descriptions_file: str = "config/provider_descriptions.json"
 
     frontend_json_path: str = "public/data/providers.json"
+    auth_providers_file: str = "public/data/auth_providers.json"
     models_json_path: str = "public/data/models.json"
     api_descriptions_json_path: str = "public/data/api_descriptions.json"
     provider_descriptions_json_path: str = "public/data/provider_descriptions.json"

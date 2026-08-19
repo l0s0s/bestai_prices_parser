@@ -2,6 +2,7 @@ import typer
 from app.db import SessionLocal, init_db as db_init
 from app.services.provider_discovery import crawl_enabled_sources, normalize_and_deduplicate
 from app.services.payment_methods import sync_payment_methods_into_frontend_json
+from app.services.auth_providers import sync_auth_providers_into_frontend_json
 from app.services.trust_check import sync_domain_age_into_frontend_json, update_domain_age_for_all_providers
 from app.services.api_descriptions import build_api_descriptions
 from app.services.provider_descriptions import build_provider_descriptions
@@ -59,6 +60,19 @@ def sync_payment_methods_cmd():
     config/payment_methods.json without re-running the full pipeline."""
     changed = sync_payment_methods_into_frontend_json()
     typer.echo(f"Updated payment_methods for {changed} row(s) in public/data/providers.json.")
+
+
+@app.command("sync-auth-providers")
+def sync_auth_providers_cmd():
+    """Merge provider/model rows from public/data/auth_providers.json into
+    public/data/providers.json, adding only rows not already present there
+    (providers whose pricing requires login/signup and so can't be
+    auto-scraped; curated by hand instead). Existing rows are never
+    overwritten. Run after editing public/data/auth_providers.json, and again
+    after any update-all (which rebuilds providers.json from the DB and
+    drops these rows)."""
+    added = sync_auth_providers_into_frontend_json()
+    typer.echo(f"Added {added} row(s) from public/data/auth_providers.json into public/data/providers.json.")
 
 
 @app.command("generate-api-descriptions")
