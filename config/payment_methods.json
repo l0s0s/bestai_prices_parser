@@ -1,9 +1,13 @@
 {
   "91token.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "996444.cn": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "aliyun.com": [
     "Alipay",
@@ -13,70 +17,103 @@
     "Debit cards",
     "Huabei",
     "MYbank",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "anthropic.com": [
     "Credit cards",
     "Debit cards",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "api-top.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "apikey.fun": [
     "Alipay",
     "WeChat Pay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
-  "apirank.vip": [],
+  "apirank.vip": [
+    "Crypto",
+    "Alipay"
+  ],
   "aruhub.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
-  "ccwu.cc": [],
+  "ccwu.cc": [
+    "Crypto",
+    "Alipay"
+  ],
   "codepup.cn": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "deepinfra.com": [
     "Credit cards",
     "Debit cards",
     "Stripe",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "deepseek.com": [
     "Alipay",
     "WeChat Pay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "dragon3api.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "google.dev": [
     "Credit cards",
     "Debit cards",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "gwlink.cc": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "hapiopen.cc": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "meta.com": [
     "Credit cards",
     "Debit cards",
     "PayPal",
-    "Meta Pay"
+    "Meta Pay",
+    "Crypto",
+    "Alipay"
   ],
   "microsoft.com": [
     "Credit cards",
     "Debit cards",
-    "PayPal"
+    "PayPal",
+    "Crypto",
+    "Alipay"
   ],
   "onehop.ai": [
     "Credit cards",
     "Debit cards",
     "Stripe",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "openai.com": [
     "Credit cards",
@@ -87,7 +124,9 @@
     "Kakao Pay",
     "Naver Pay",
     "Google Play",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "openrouter.ai": [
     "Credit cards",
@@ -95,7 +134,8 @@
     "Alipay",
     "USDC",
     "Coinbase",
-    "USD"
+    "USD",
+    "Crypto"
   ],
   "perplexity.ai": [
     "Credit cards",
@@ -105,47 +145,62 @@
     "Google Pay",
     "Google Play",
     "Samsung Galaxy Store",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "quotarouter.ai": [
     "CNY",
-    "USD"
+    "USD",
+    "Crypto",
+    "Alipay"
   ],
   "qwen.ai": [
     "Credit cards",
     "Debit cards",
     "Alipay",
     "UnionPay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "relaybases.com": [
     "WeChat Pay",
     "Alipay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "ssnaiyun.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "stepfun.com": [
     "Alipay",
     "WeChat Pay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "weekly-day.top": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "x-llm.net": [
     "Alipay",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "xeduapi.com": [
-    "CNY"
+    "CNY",
+    "Crypto",
+    "Alipay"
   ],
   "xiaojingai.com": [
     "WeChat Pay",
     "Alipay",
     "USDT",
-    "CNY"
+    "CNY",
+    "Crypto"
   ],
   "zivv.pro": [
     "WeChat Pay",
@@ -155,6 +210,7 @@
     "Credit cards",
     "Debit cards",
     "CNY",
-    "USD"
+    "USD",
+    "Crypto"
   ]
 }
